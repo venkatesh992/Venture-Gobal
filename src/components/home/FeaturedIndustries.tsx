@@ -131,8 +131,7 @@ export function FeaturedIndustries() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex-none w-[85%] sm:w-[45%] lg:w-[calc(25%-1.125rem)] snap-start"
               >
-                <Link 
-                  href={industry.href}
+                <div 
                   className="group relative flex flex-col justify-between h-[360px] bg-white rounded-[1.5rem] p-6 border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:border-transparent transition-all duration-500 overflow-hidden"
                 >
                   {/* Hover Image Background */}
@@ -173,14 +172,17 @@ export function FeaturedIndustries() {
                     </div>
                     
                     {/* Explore Link (Reveals at bottom) */}
-                    <div className="relative flex items-center text-sm font-bold text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-75">
+                    <Link 
+                      href={industry.href}
+                      className="relative inline-flex items-center text-sm font-bold text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-75 hover:text-blue-300 w-fit"
+                    >
                       <span>Explore Sector</span>
                       <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300 ease-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </div>
+                    </Link>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>
