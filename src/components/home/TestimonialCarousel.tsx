@@ -6,23 +6,29 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Amit Patel",
-    role: "Electrician · UAE",
+    name: "Rajesh Kumar",
+    role: "Senior HVAC Technician · Placed in UAE",
     quote:
-      "VG found me a strong placement quickly and handled every document without drama. I knew where I stood at each step.",
+      "VG Recruitment found me a strong placement quickly and handled my entire visa process without drama. I knew exactly where I stood at each step.",
   },
   {
-    name: "Maria Gomez",
-    role: "Nurse · Saudi Arabia",
+    name: "Dr. Ananya Sharma",
+    role: "Chief Medical Officer · Placed in Saudi Arabia",
     quote:
-      "Visa support and settlement advice were practical — not generic. They helped me start work abroad with confidence.",
+      "Their credentialing and relocation support were flawless. They didn't just find me a role; they secured my family's transition abroad.",
   },
   {
-    name: "John Lee",
-    role: "IT Specialist · Canada",
+    name: "Vikram Desai",
+    role: "IT Solutions Architect · Placed in Canada",
     quote:
-      "Transparent process, clear timelines, and recruiters who actually cared about the fit — not just filling a seat.",
+      "A completely transparent process. VG's recruiters actually understood my technical stack and found an employer who valued my exact skill set.",
   },
+  {
+    name: "Priya Menon",
+    role: "HR Director · Global Logistics Corp",
+    quote:
+      "We rely heavily on VG Recruitment to source reliable, vetted engineering and warehouse staff. They deliver top-tier talent every single time.",
+  }
 ];
 
 export function TestimonialCarousel() {

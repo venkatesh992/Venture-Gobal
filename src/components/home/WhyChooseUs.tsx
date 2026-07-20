@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, Globe2, FileCheck, Users } from "lucide-react";
+import { ShieldCheck, Globe2, FileCheck, Users, BriefcaseIcon } from "lucide-react";
 
 const reasons = [
   {
@@ -44,6 +44,13 @@ export function WhyChooseUs() {
     <section className="py-10 md:py-16 bg-white relative overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.06)] z-20">
       {/* Decorative background blur */}
       <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] rounded-full bg-blue-50/50 blur-3xl pointer-events-none" />
+      
+      {/* Thematic Recruitment Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.02] text-slate-900 z-0">
+        <BriefcaseIcon className="absolute top-10 -left-20 w-96 h-96 -rotate-12" />
+        <Globe2 className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] rotate-12" />
+        <FileCheck className="absolute top-20 -right-20 w-96 h-96 rotate-12" />
+      </div>
       
       <div className="container-custom max-w-[1440px] relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">

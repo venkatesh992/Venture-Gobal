@@ -4,10 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { label: "Candidates placed", value: 5000, suffix: "+" },
-  { label: "Countries", value: 25, suffix: "+" },
-  { label: "Years guiding careers", value: 15, suffix: "" },
-  { label: "Partner employers", value: 200, suffix: "+" },
+  { label: "Global Placements", value: 10000, suffix: "+" },
+  { label: "Visa Success Rate", value: 98, suffix: "%" },
+  { label: "Active Employer Partners", value: 500, suffix: "+" },
+  { label: "Destinations", value: 25, suffix: "+" },
 ];
 
 function useCountUp(target: number, active: boolean, duration = 1600) {

@@ -39,8 +39,8 @@ export function HeroSection() {
                 VG Recruitment
               </span>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.5rem] font-bold text-[#0f172a] leading-[1.05] tracking-tight mb-6">
-                Global Careers, <br />
-                <span className="text-slate-600">Handled End to End.</span>
+                Your Gateway to <br />
+                <span className="text-slate-600">Global Careers.</span>
               </h1>
               <p className="text-slate-600 text-lg mb-10 max-w-lg leading-relaxed">
                 We connect skilled professionals with trusted employers across 25+ countries — from offer letter to arrival.
@@ -59,18 +59,62 @@ export function HeroSection() {
 
             </div>
 
-            {/* Right Column - Image */}
-            <div className="lg:col-span-5 relative h-[300px] sm:h-[400px] lg:h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] animate-hero-copy-delay lg:translate-x-4">
-              <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
-                alt="Modern office patio"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {/* Subtle inner shadow overlay */}
-              <div className="absolute inset-0 border border-black/5 rounded-[2.5rem] pointer-events-none" />
+            {/* Right Column - Image Collage */}
+            <div className="lg:col-span-5 relative h-[400px] sm:h-[500px] w-full animate-hero-copy-delay lg:translate-x-4">
+              <div className="grid grid-cols-2 gap-4 h-full relative z-10">
+                {/* Left tall image (White Collar) */}
+                <div className="relative h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
+                  <Image
+                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
+                    alt="Indian IT Professional"
+                    fill
+                    priority
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
+                </div>
+                
+                {/* Right stacked images */}
+                <div className="grid grid-rows-2 gap-4 h-full">
+                  {/* Top right (Blue Collar / Engineering) */}
+                  <div className="relative h-full rounded-[2rem] overflow-hidden shadow-lg group">
+                    <Image
+                      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                      alt="Indian Construction Engineer"
+                      fill
+                      priority
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
+                  </div>
+                  
+                  {/* Bottom right (Healthcare) */}
+                  <div className="relative h-full rounded-[2rem] overflow-hidden shadow-lg group">
+                    <Image
+                      src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+                      alt="Indian Healthcare Professional"
+                      fill
+                      priority
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Recruitment Badge */}
+              <div className="absolute top-[35%] -left-8 sm:-left-12 z-20 bg-white/95 backdrop-blur-md px-5 py-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-4 animate-[float_4s_ease-in-out_infinite]">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                  <Briefcase size={22} strokeWidth={2.5} />
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Just Placed</p>
+                  <p className="text-[15px] font-bold text-slate-900">Senior Engineer • Dubai</p>
+                </div>
+              </div>
             </div>
 
           </div>
