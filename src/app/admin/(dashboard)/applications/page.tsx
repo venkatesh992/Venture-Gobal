@@ -25,8 +25,8 @@ export default async function AdminApplicationsPage() {
       </header>
 
       {/* Filters (UI Only) */}
-      <div className="flex items-center justify-between gap-4 rounded-lg border border-white/5 bg-background p-4">
-        <div className="relative flex-1 max-w-sm">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 rounded-lg border border-white/5 bg-background p-4">
+        <div className="relative flex-1 max-w-full sm:max-w-sm">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
           <input
             type="text"
@@ -34,8 +34,8 @@ export default async function AdminApplicationsPage() {
             className="flex h-[34px] w-full rounded-md border border-white/10 bg-surface pl-9 pr-3 text-[12px] text-foreground focus:border-primary focus:outline-none"
           />
         </div>
-        <button className="btn btn-secondary h-[34px] px-4 text-[12px]">
-          <Filter className="mr-2 h-4 w-4" />
+        <button className="btn btn-secondary h-[34px] px-4 text-[12px] shrink-0">
+          <Filter className="mr-2 h-4 w-4 inline-block" />
           Filter
         </button>
       </div>

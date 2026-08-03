@@ -58,7 +58,7 @@ export default function FinlandDestinationPage() {
       {/* Trust Metrics */}
       <div className="border-b border-border bg-surface/50 backdrop-blur-sm relative z-20">
         <div className="container-custom">
-          <div className="grid grid-cols-2 gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
             <div className="flex flex-col items-center justify-center">
               <p className="text-3xl font-display font-bold text-foreground">#1</p>
               <p className="text-sm font-semibold uppercase tracking-wider text-muted mt-1">World Happiness</p>
@@ -80,9 +80,9 @@ export default function FinlandDestinationPage() {
       </div>
 
       {/* UNIQUE SECTION: The Nordic Work Culture */}
-      <section className="section bg-background overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-background overflow-hidden relative">
         <div className="container-custom">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
             
             <div className="order-1 lg:order-1">
               <span className="inline-flex items-center justify-center rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-500 mb-4">
@@ -146,9 +146,9 @@ export default function FinlandDestinationPage() {
       </section>
 
       {/* UNIQUE SECTION: Innovation & Tech */}
-      <section className="section bg-surface border-y border-border">
+      <section className="py-12 md:py-16 bg-surface border-y border-border">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <h2 className="font-display text-4xl font-bold text-foreground tracking-tight">
               Where We Place Talent
             </h2>
@@ -157,7 +157,7 @@ export default function FinlandDestinationPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             {/* Tech & Gaming */}
             <div className="rounded-[var(--radius-xl)] bg-background p-8 md:p-10 shadow-lg border border-border/50 hover:shadow-cyan-500/5 transition-all">
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 mb-6 text-blue-600">
@@ -208,7 +208,7 @@ export default function FinlandDestinationPage() {
       </section>
 
       {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-24">
+      <section className="relative overflow-hidden bg-slate-950 py-16 md:py-20">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=1600&q=80"

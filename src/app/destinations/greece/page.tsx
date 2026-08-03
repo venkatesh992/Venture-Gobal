@@ -59,7 +59,7 @@ export default function GreeceDestinationPage() {
       {/* Trust Metrics */}
       <div className="border-b border-border bg-surface/50 backdrop-blur-sm relative z-20">
         <div className="container-custom">
-          <div className="grid grid-cols-2 gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
             <div className="flex flex-col items-center justify-center">
               <p className="text-3xl font-display font-bold text-foreground">Top 3</p>
               <p className="text-sm font-semibold uppercase tracking-wider text-muted mt-1">Global Tourism</p>
@@ -81,9 +81,9 @@ export default function GreeceDestinationPage() {
       </div>
 
       {/* UNIQUE SECTION: The Hospitality Track */}
-      <section className="section bg-background overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-background overflow-hidden relative">
         <div className="container-custom">
-           <div className="text-center max-w-3xl mx-auto mb-16">
+           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <span className="inline-flex items-center justify-center rounded-full bg-sky-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-sky-500 mb-4">
               Our Specialization
             </span>
@@ -95,7 +95,7 @@ export default function GreeceDestinationPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-3">
             {/* F&B */}
             <div className="rounded-[var(--radius-xl)] bg-surface p-8 shadow-sm border border-border/50 transition-all hover:-translate-y-1 hover:shadow-sky-500/10">
               <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3 py-1 mb-6 text-amber-500">
@@ -148,12 +148,12 @@ export default function GreeceDestinationPage() {
       </section>
 
       {/* UNIQUE SECTION: Seasonal vs Permanent */}
-      <section className="section bg-slate-950 border-y border-border overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-slate-950 border-y border-border overflow-hidden relative">
         <div className="absolute inset-0 opacity-10">
            <Image src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80" alt="bg" fill className="object-cover" />
         </div>
         <div className="container-custom relative z-10">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
             <div>
               <h2 className="font-display text-4xl font-bold text-white tracking-tight md:text-5xl mb-6">
                 Choose Your Lifestyle
@@ -192,7 +192,7 @@ export default function GreeceDestinationPage() {
       </section>
 
       {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-24">
+      <section className="relative overflow-hidden bg-slate-950 py-16 md:py-20">
         <div className="container-custom relative z-10 text-center">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-lg max-w-3xl mx-auto leading-tight">
             Ready for your Mediterranean career?

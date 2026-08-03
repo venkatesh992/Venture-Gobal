@@ -59,7 +59,7 @@ export default function NetherlandsDestinationPage() {
       {/* Trust Metrics */}
       <div className="border-b border-border bg-surface/50 backdrop-blur-sm relative z-20">
         <div className="container-custom">
-          <div className="grid grid-cols-2 gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
             <div className="flex flex-col items-center justify-center">
               <p className="text-3xl font-display font-bold text-foreground">95%</p>
               <p className="text-sm font-semibold uppercase tracking-wider text-muted mt-1">English Fluency</p>
@@ -81,9 +81,9 @@ export default function NetherlandsDestinationPage() {
       </div>
 
       {/* UNIQUE SECTION: The 30% Tax Ruling */}
-      <section className="section bg-background overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-background overflow-hidden relative">
         <div className="container-custom">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-2 items-center">
              <div className="order-1 lg:order-1">
               <span className="inline-flex items-center justify-center rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-500 mb-4">
                 Financial Advantage
@@ -149,9 +149,9 @@ export default function NetherlandsDestinationPage() {
       </section>
 
       {/* UNIQUE SECTION: Tech & Logistics Hubs */}
-      <section className="section bg-surface border-y border-border">
+      <section className="py-12 md:py-16 bg-surface border-y border-border">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <h2 className="font-display text-4xl font-bold text-foreground tracking-tight">
               Dominant Industries
             </h2>
@@ -160,7 +160,7 @@ export default function NetherlandsDestinationPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             {/* Tech */}
             <div className="rounded-[var(--radius-xl)] bg-background p-8 md:p-10 shadow-lg border border-border/50 hover:shadow-orange-500/5 transition-all">
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 mb-6 text-blue-600">
@@ -211,7 +211,7 @@ export default function NetherlandsDestinationPage() {
       </section>
 
       {/* Language Section */}
-       <section className="section bg-slate-950 overflow-hidden relative">
+       <section className="py-12 md:py-16 bg-slate-950 overflow-hidden relative">
         <div className="container-custom relative z-10 text-center max-w-3xl mx-auto">
            <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 mb-6">
              <MessagesSquare size={32} />
@@ -226,7 +226,7 @@ export default function NetherlandsDestinationPage() {
       </section>
 
       {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-orange-600 py-24">
+      <section className="relative overflow-hidden bg-orange-600 py-16 md:py-20">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
         
         <div className="container-custom relative z-10 text-center">

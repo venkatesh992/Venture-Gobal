@@ -85,7 +85,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
       {/* Social Proof / Trust Metrics Banner */}
       <div className="border-y border-border bg-surface/50 backdrop-blur-sm relative z-20">
         <div className="container-custom">
-          <div className="grid grid-cols-2 gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 py-8 md:grid-cols-4 divide-x divide-border-light text-center">
             <div className="flex flex-col items-center justify-center">
               <p className="text-3xl font-display font-bold text-foreground">98%</p>
               <p className="text-sm font-semibold uppercase tracking-wider text-muted mt-1">Visa Success Rate</p>
@@ -107,12 +107,12 @@ export default async function DestinationDetailPage({ params }: PageProps) {
       </div>
 
       {/* The Venture Global Advantage (Persuasive Agency Selling) */}
-      <section className="section bg-background overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-background overflow-hidden relative">
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container-custom relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
             <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary mb-4">
               Why Choose Us
             </span>
@@ -159,10 +159,10 @@ export default async function DestinationDetailPage({ params }: PageProps) {
       </section>
 
       {/* Bento Box Overview & Highlights */}
-      <section className="section bg-surface border-y border-border">
-        <div className="container-custom grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-10">
+      <section className="py-12 md:py-16 bg-surface border-y border-border">
+        <div className="container-custom grid gap-6 md:gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-10">
           
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 md:gap-8">
             <div className="rounded-[var(--radius-xl)] bg-background p-8 md:p-10 shadow-sm border border-border/50">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 mb-6">
                 <Globe2 size={14} className="text-primary" />
@@ -248,9 +248,9 @@ export default async function DestinationDetailPage({ params }: PageProps) {
       </section>
 
       {/* "How We Get You There" Actionable Pipeline */}
-      <section className="section bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <h2 className="font-display text-4xl font-bold text-foreground tracking-tight">
               Your Journey to {dest.shortName}
             </h2>
@@ -297,7 +297,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
             </div>
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-10 md:mt-12 text-center">
              <Link href="/contact" className="inline-flex items-center gap-2 text-primary font-bold hover:text-primary-dark transition-colors border-b-2 border-primary/30 hover:border-primary pb-1">
                Speak with a {dest.shortName} relocation expert <ChevronRight size={18} />
              </Link>
@@ -306,7 +306,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
       </section>
 
       {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-24">
+      <section className="relative overflow-hidden bg-slate-950 py-16 md:py-20">
         <div className="absolute inset-0 opacity-20">
           <Image
             src={dest.image}
