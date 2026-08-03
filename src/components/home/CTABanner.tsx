@@ -47,7 +47,7 @@ export function CTABanner() {
                 Explore global opportunities and let our experts handle your visa and relocation.
               </p>
               <Link 
-                href="/candidates" 
+                href="/submit-cv" 
                 className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-[#04255A] text-white font-bold hover:bg-[#02183D] transition-all shadow-[0_8px_20px_rgba(4,37,90,0.25)] hover:shadow-[0_12px_25px_rgba(4,37,90,0.35)] hover:-translate-y-1"
               >
                 Submit your CV

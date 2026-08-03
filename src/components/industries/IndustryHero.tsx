@@ -46,7 +46,7 @@ export function IndustryHero({ name, description, heroImage }: IndustryHeroProps
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
-              href="/candidates" 
+              href="/submit-cv" 
               className="inline-flex justify-center items-center h-14 px-8 rounded-full bg-[#0D34E9] text-white font-bold hover:bg-blue-800 transition-colors shadow-[0_8px_20px_rgba(13,52,233,0.25)]"
             >
               Submit Your CV
