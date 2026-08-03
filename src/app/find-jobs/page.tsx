@@ -6,7 +6,7 @@ import { PageCTA, PageHero } from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Find Jobs",
   description:
-    "Browse overseas job openings across the Gulf, Europe, North America, and Asia-Pacific with VG Recruitment.",
+    "Browse overseas job openings across the Gulf, Europe, North America, and Asia-Pacific with Venturoedge.",
 };
 
 const jobs = [

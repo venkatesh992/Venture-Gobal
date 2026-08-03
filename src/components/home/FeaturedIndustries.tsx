@@ -81,19 +81,19 @@ export function FeaturedIndustries() {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-[#f8fafc]">
+    <section className="py-10 md:py-16 bg-[#04255A]">
       <div className="container-custom max-w-[1440px]">
         
         {/* Header with Slider Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <span className="text-[#0D34E9] font-bold tracking-wider text-sm uppercase mb-3 block">
+            <span className="text-blue-400 font-bold tracking-wider text-sm uppercase mb-3 block">
               Our Expertise
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
               Industries We Serve
             </h2>
-            <p className="text-slate-600 text-lg">
+            <p className="text-blue-100/80 text-lg">
               We specialize in connecting highly skilled professionals with top-tier employers across these core global sectors.
             </p>
           </div>
@@ -101,14 +101,14 @@ export function FeaturedIndustries() {
           <div className="hidden md:flex items-center gap-3">
             <button 
               onClick={scrollLeft} 
-              className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:border-[#0D34E9] hover:text-[#0D34E9] hover:shadow-md transition-all"
+              className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-sm"
               aria-label="Scroll left"
             >
               <ChevronLeft size={24} />
             </button>
             <button 
               onClick={scrollRight} 
-              className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:border-[#0D34E9] hover:text-[#0D34E9] hover:shadow-md transition-all"
+              className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-sm"
               aria-label="Scroll right"
             >
               <ChevronRight size={24} />
@@ -188,7 +188,7 @@ export function FeaturedIndustries() {
           </div>
           
           {/* Fading Edges for Slider */}
-          <div className="absolute top-0 right-0 bottom-8 w-24 bg-gradient-to-l from-[#f8fafc] to-transparent pointer-events-none hidden lg:block" />
+          <div className="absolute top-0 right-0 bottom-8 w-24 bg-gradient-to-l from-[#04255A] to-transparent pointer-events-none hidden lg:block" />
         </div>
       </div>
     </section>

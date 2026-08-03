@@ -15,8 +15,8 @@ export function HeroSection() {
           <div
             className="absolute top-[20%] left-[2%] w-24 h-24 sm:w-32 sm:h-32 rounded-full opacity-90"
             style={{
-              background: "radial-gradient(circle at 30% 30%, #4A6BFC, #0D34E9)",
-              boxShadow: "0 10px 25px -5px rgba(13, 52, 233, 0.4), inset -10px -10px 20px rgba(0,0,0,0.1)",
+              background: "radial-gradient(circle at 30% 30%, #4674A1, #04255A)",
+              boxShadow: "0 10px 25px -5px rgba(4, 37, 90, 0.4), inset -10px -10px 20px rgba(0,0,0,0.1)",
               animation: "float 6s ease-in-out infinite"
             }}
           />
@@ -36,7 +36,7 @@ export function HeroSection() {
             {/* Left Column - Content */}
             <div className="lg:col-span-7 max-w-2xl animate-hero-copy">
               <span className="inline-block text-slate-500 font-bold tracking-widest text-xs mb-4 uppercase">
-                VG Recruitment
+                Venturoedge
               </span>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.5rem] font-bold text-[#0f172a] leading-[1.05] tracking-tight mb-6">
                 Your Gateway to <br />

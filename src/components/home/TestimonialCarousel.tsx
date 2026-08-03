@@ -9,7 +9,7 @@ const testimonials = [
     name: "Rajesh Kumar",
     role: "Senior HVAC Technician · Placed in UAE",
     quote:
-      "VG Recruitment found me a strong placement quickly and handled my entire visa process without drama. I knew exactly where I stood at each step.",
+      "Venturoedge found me a strong placement quickly and handled my entire visa process without drama. I knew exactly where I stood at each step.",
   },
   {
     name: "Dr. Ananya Sharma",
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Priya Menon",
     role: "HR Director · Global Logistics Corp",
     quote:
-      "We rely heavily on VG Recruitment to source reliable, vetted engineering and warehouse staff. They deliver top-tier talent every single time.",
+      "We rely heavily on Venturoedge to source reliable, vetted engineering and warehouse staff. They deliver top-tier talent every single time.",
   }
 ];
 

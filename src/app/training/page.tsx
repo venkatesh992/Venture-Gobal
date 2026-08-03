@@ -5,7 +5,7 @@ import { PageCTA, PageHero } from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Training",
   description:
-    "Pre-departure, language, and technical training courses to prepare for overseas employment with VG Recruitment.",
+    "Pre-departure, language, and technical training courses to prepare for overseas employment with Venturoedge.",
 };
 
 const courses = [

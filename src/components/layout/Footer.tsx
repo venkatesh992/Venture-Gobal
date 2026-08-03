@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   MapPin,
   Phone,
@@ -32,8 +35,11 @@ const legalLinks = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) return null;
+
   return (
-    <footer className="bg-foreground text-white">
+    <footer className="bg-[#04255A] text-white">
       {/* Main Footer */}
       <div className="container-custom section-sm">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -44,15 +50,15 @@ export function Footer() {
                 VG
               </div>
               <div>
-                <h3 className="font-display text-base font-bold leading-tight">
-                  VG Recruitment
+                <h3 className="font-display text-base font-bold leading-tight text-white">
+                  Venturoedge
                 </h3>
-                <p className="text-[10px] text-muted-light tracking-wider uppercase">
+                <p className="text-[10px] text-white/70 tracking-wider uppercase">
                   Global Careers
                 </p>
               </div>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed mb-5">
+            <p className="text-sm text-white/90 leading-relaxed mb-5">
               Your trusted partner for overseas employment. We connect skilled
               professionals with top international employers across the globe.
             </p>
@@ -63,7 +69,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-white">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -71,7 +77,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-primary-light transition-colors flex items-center gap-1 group"
+                    className="text-sm text-white/90 hover:text-white transition-colors flex items-center gap-1 group"
                   >
                     {link.label}
                     <ArrowUpRight
@@ -86,7 +92,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-white">
               Services
             </h4>
             <ul className="space-y-2.5">
@@ -94,7 +100,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-primary-light transition-colors flex items-center gap-1 group"
+                    className="text-sm text-white/90 hover:text-white transition-colors flex items-center gap-1 group"
                   >
                     {link.label}
                     <ArrowUpRight
@@ -109,23 +115,23 @@ export function Footer() {
 
           {/* Contact Us */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider text-white">
               Contact Us
             </h4>
             <ul className="space-y-3.5">
-              <li className="flex items-start gap-3 text-sm text-gray-400">
+              <li className="flex items-start gap-3 text-sm text-white/90">
                 <MapPin size={16} className="mt-0.5 text-primary-light shrink-0" />
                 <span>123 Business District,<br />City, State — 500001</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-gray-400">
+              <li className="flex items-center gap-3 text-sm text-white/90">
                 <Phone size={16} className="text-primary-light shrink-0" />
                 <span>+91 XXXXX XXXXX</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-gray-400">
+              <li className="flex items-center gap-3 text-sm text-white/90">
                 <Mail size={16} className="text-primary-light shrink-0" />
                 <span>info@vgrecruitment.com</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-gray-400">
+              <li className="flex items-center gap-3 text-sm text-white/90">
                 <Globe size={16} className="text-primary-light shrink-0" />
                 <span>www.vgrecruitment.com</span>
               </li>
@@ -137,8 +143,8 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} VG Recruitment Agency. All rights
+          <p className="text-xs text-white/70">
+            © {new Date().getFullYear()} Venturoedge Agency. All rights
             reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -146,7 +152,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-xs text-white/70 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>

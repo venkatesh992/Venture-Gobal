@@ -1,0 +1,71 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { prisma } from "@/lib/prisma";
+import { jobApplicationSchema } from "@/lib/validations";
+import fs from "fs/promises";
+import path from "path";
+
+// Helper to save base64 to public/uploads
+async function saveBase64File(base64Data: string, prefix: string): Promise<string> {
+  if (!base64Data.startsWith("data:")) return base64Data; // Return as-is if it's a regular URL/string
+  
+  const matches = base64Data.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+  if (!matches || matches.length !== 3) return base64Data;
+  
+  const mimeType = matches[1];
+  const data = matches[2];
+  
+  // Very basic extension mapping
+  let ext = ".bin";
+  if (mimeType.includes("pdf")) ext = ".pdf";
+  else if (mimeType.includes("word")) ext = ".docx";
+  else if (mimeType.includes("png")) ext = ".png";
+  else if (mimeType.includes("jpeg") || mimeType.includes("jpg")) ext = ".jpg";
+  
+  const fileName = `${prefix}-${Date.now()}${ext}`;
+  const uploadDir = path.join(process.cwd(), "public", "uploads");
+  
+  try {
+    await fs.mkdir(uploadDir, { recursive: true });
+    await fs.writeFile(path.join(uploadDir, fileName), data, "base64");
+    return `/uploads/${fileName}`;
+  } catch (e) {
+    console.error("File saving error:", e);
+    return base64Data; // Fallback
+  }
+}
+
+export async function submitApplication(data: unknown, jobId?: string) {
+  try {
+    const parsedData = jobApplicationSchema.parse(data);
+
+    // Save files if they are base64
+    const finalResumeUrl = parsedData.resumeUrl 
+      ? await saveBase64File(parsedData.resumeUrl, "resume") 
+      : undefined;
+      
+    const finalPassportCopy = parsedData.passportCopy 
+      ? await saveBase64File(parsedData.passportCopy, "passport") 
+      : undefined;
+
+    // Save to database
+    const application = await prisma.application.create({
+      data: {
+        jobId: jobId || undefined,
+        fullName: parsedData.fullName,
+        email: parsedData.email,
+        phone: parsedData.phone,
+        experience: parsedData.experience,
+        resumeUrl: finalResumeUrl,
+        passportCopy: finalPassportCopy,
+      },
+    });
+
+    revalidatePath("/admin/applications");
+    return { success: true, application };
+  } catch (error) {
+    console.error("Error submitting application:", error);
+    return { success: false, error: "Failed to submit application. Please try again." };
+  }
+}

@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0D34E9;
-  --color-primary-dark: #0926B0;
-  --color-primary-light: #4A6BFC;
-  --color-primary-50: #EFF3FE;
-  --color-primary-100: #E0E8FD;
-  --color-primary-200: #C2D0FB;
+  --color-primary: #04255A;
+  --color-primary-dark: #02183D;
+  --color-primary-light: #4674A1;
+  --color-primary-50: #F0F4F8;
+  --color-primary-100: #D9E4EF;
+  --color-primary-200: #B4CBE0;
   --color-secondary: #0f172a;
   --color-secondary-dark: #020617;
   --color-secondary-light: #334155;
@@ -21,19 +21,19 @@
   --color-success: #059669;
   --color-warning: #ea580c;
   --color-error: #dc2626;
-  --color-info: #0D34E9;
+  --color-info: #04255A;
 
   --font-sans: var(--font-sans-face), "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display-face), var(--font-sans-face), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --primary: #0D34E9;
-  --primary-dark: #0926B0;
-  --primary-light: #4A6BFC;
-  --primary-50: #EFF3FE;
-  --primary-100: #E0E8FD;
-  --primary-200: #C2D0FB;
+  --primary: #04255A;
+  --primary-dark: #02183D;
+  --primary-light: #4674A1;
+  --primary-50: #F0F4F8;
+  --primary-100: #D9E4EF;
+  --primary-200: #B4CBE0;
   --secondary: #0f172a;
   --secondary-dark: #020617;
   --background: #f8fafc;
@@ -165,7 +165,7 @@
 
   .input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgb(13 52 233 / 0.12);
+    box-shadow: 0 0 0 4px rgb(4 37 90 / 0.12);
   }
 
   .input::placeholder {
@@ -224,20 +224,9 @@
     right: 0;
     z-index: 50;
     transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-    border-bottom: 1px solid transparent;
-  }
-
-  .site-header--transparent {
-    background: transparent;
+    background: var(--primary);
     color: #fff;
-  }
-
-  .site-header--solid {
-    background: rgba(255, 255, 255, 0.86);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom-color: var(--border-light);
-    color: var(--foreground);
+    border-bottom: 1px solid var(--primary-dark);
   }
 
   .site-header-logo {
@@ -261,24 +250,44 @@
     font-size: 13px;
   }
 
-  .site-header--transparent .site-header-logo-mark {
+  .site-header .site-header-logo-mark {
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid rgba(255, 255, 255, 0.28);
   }
 
   .site-header-nav-link {
+    position: relative;
     display: inline-flex;
     padding: 8px 12px;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
-    color: inherit;
-    opacity: 0.72;
-    transition: opacity 0.2s ease;
+    color: #ffffff;
+    opacity: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .site-header-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 2px;
   }
 
   .site-header-nav-link:hover {
     opacity: 1;
+    transform: translateY(-1px);
+  }
+
+  .site-header-nav-link:hover::after {
+    transform: scaleX(1);
   }
 
   .site-header-cta {
@@ -293,14 +302,9 @@
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
 
-  .site-header--transparent .site-header-cta {
+  .site-header .site-header-cta {
     background: #fff;
-    color: var(--foreground);
-  }
-
-  .site-header--solid .site-header-cta {
-    background: var(--primary);
-    color: #fff;
+    color: var(--primary);
   }
 
   .site-header-cta:hover {

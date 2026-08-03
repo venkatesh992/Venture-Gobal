@@ -22,8 +22,8 @@ export const jobApplicationSchema = z.object({
   experience: z.string().optional(),
   currentJob: z.string().optional(),
   expectedSalary: z.string().optional(),
-  resumeUrl: z.string().url().optional(),
-  passportCopy: z.string().url().optional(),
+  resumeUrl: z.string().optional(),
+  passportCopy: z.string().optional(),
 });
 
 // Course enrollment schema

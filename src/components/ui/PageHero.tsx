@@ -1,33 +1,46 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type PageHeroProps = {
   label?: string;
   title: string;
   description?: string;
   actions?: React.ReactNode;
+  image?: string;
 };
 
-export function PageHero({ label, title, description, actions }: PageHeroProps) {
+export function PageHero({ 
+  label, 
+  title, 
+  description, 
+  actions,
+  image = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+}: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-border-light bg-secondary text-white">
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse 70% 80% at 90% 0%, rgba(37,99,235,0.4), transparent 55%), radial-gradient(ellipse 50% 60% at 0% 100%, rgba(37,99,235,0.15), transparent 50%)",
-        }}
-      />
-      <div className="container-custom relative py-16 md:py-20 lg:py-24">
+    <section className="relative overflow-hidden border-b border-border-light bg-slate-950 text-white min-h-[40vh] flex flex-col justify-end">
+      <div className="absolute inset-0">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          className="object-cover scale-105"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+      </div>
+      <div className="container-custom relative py-16 md:py-20 lg:py-24 mt-auto">
         {label ? (
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-light">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-light drop-shadow-md">
             {label}
           </p>
         ) : null}
-        <h1 className="font-display max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="font-display max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
           {title}
         </h1>
         {description ? (
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg font-light drop-shadow-sm">
             {description}
           </p>
         ) : null}

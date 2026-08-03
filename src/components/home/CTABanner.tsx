@@ -13,8 +13,8 @@ export function CTABanner() {
             <svg width="400" height="400" viewBox="0 0 400 400" className="blur-md">
               <defs>
                 <linearGradient id="gradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" />
-                  <stop offset="100%" stopColor="#0D34E9" />
+                  <stop offset="0%" stopColor="#02183D" />
+                  <stop offset="100%" stopColor="#04255A" />
                 </linearGradient>
               </defs>
               <circle cx="200" cy="200" r="140" fill="none" stroke="url(#gradLeft)" strokeWidth="60" strokeDasharray="440 880" strokeLinecap="round" transform="rotate(45 200 200)" />
@@ -25,8 +25,8 @@ export function CTABanner() {
             <svg width="500" height="500" viewBox="0 0 500 500" className="blur-md">
               <defs>
                 <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#60a5fa" />
-                  <stop offset="100%" stopColor="#1e3a8a" />
+                  <stop offset="0%" stopColor="#4674A1" />
+                  <stop offset="100%" stopColor="#04255A" />
                 </linearGradient>
               </defs>
               <circle cx="250" cy="250" r="180" fill="none" stroke="url(#gradRight)" strokeWidth="70" strokeDasharray="565 1130" strokeLinecap="round" transform="rotate(-135 250 250)" />
@@ -48,7 +48,7 @@ export function CTABanner() {
               </p>
               <Link 
                 href="/candidates" 
-                className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-[#0D34E9] text-white font-bold hover:bg-blue-800 transition-all shadow-[0_8px_20px_rgba(13,52,233,0.25)] hover:shadow-[0_12px_25px_rgba(13,52,233,0.35)] hover:-translate-y-1"
+                className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-[#04255A] text-white font-bold hover:bg-[#02183D] transition-all shadow-[0_8px_20px_rgba(4,37,90,0.25)] hover:shadow-[0_12px_25px_rgba(4,37,90,0.35)] hover:-translate-y-1"
               >
                 Submit your CV
               </Link>

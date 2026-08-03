@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact VG Recruitment for overseas jobs, visa assistance, training, and career counselling.",
+    "Contact Venturoedge for overseas jobs, visa assistance, training, and career counselling.",
 };
 
 export default function ContactPage() {

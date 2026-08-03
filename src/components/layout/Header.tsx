@@ -22,6 +22,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  if (pathname.startsWith("/admin")) return null;
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 24);
     handleScroll();
@@ -37,24 +39,16 @@ export function Header() {
   }, [isMobileMenuOpen]);
 
   const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
-  const transparent = isImmersive && !isScrolled;
-
   return (
     <>
-      <header
-        className={`site-header ${transparent ? "site-header--transparent" : "site-header--solid"}`}
-        role="banner"
-      >
+      <header className="site-header" role="banner">
         <div className="container-custom">
           <nav
-            className="flex h-[72px] items-center justify-between"
+            className="flex h-[88px] items-center justify-between"
             aria-label="Main navigation"
           >
-            <Link href="/" className="site-header-logo" aria-label="VG Recruitment home">
-              <span className="site-header-logo-mark">VG</span>
-              <span className="font-display text-[15px] font-semibold tracking-tight">
-                VG Recruitment
-              </span>
+            <Link href="/" className="site-header-logo" aria-label="Venturoedge home">
+              <img src="/logo.jpeg" alt="Venturoedge" className="h-14 md:h-16 w-auto object-contain" />
             </Link>
 
             <ul className="hidden items-center gap-0.5 lg:flex">
@@ -73,11 +67,7 @@ export function Header() {
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
-                className={`flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] lg:hidden ${
-                  transparent
-                    ? "text-white hover:bg-white/10"
-                    : "text-foreground hover:bg-surface-dark"
-                }`}
+                className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] lg:hidden text-white hover:bg-white/10"
                 aria-label="Toggle menu"
                 aria-expanded={isMobileMenuOpen}
               >
@@ -107,7 +97,7 @@ export function Header() {
             >
               <div className="flex h-full flex-col">
                 <div className="flex items-center justify-between border-b border-border-light px-6 py-5">
-                  <span className="font-display text-sm font-semibold">VG Recruitment</span>
+                  <span className="font-display text-sm font-semibold">Venturoedge</span>
                   <button
                     onClick={closeMobileMenu}
                     className="rounded-[var(--radius-sm)] p-2 text-muted hover:bg-surface-dark"

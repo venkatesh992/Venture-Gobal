@@ -16,190 +16,159 @@ export type Destination = {
 
 export const destinations: Destination[] = [
   {
-    slug: "uae",
-    name: "United Arab Emirates",
-    shortName: "UAE",
-    region: "Middle East",
-    jobCount: "500+ jobs",
+    slug: "greece",
+    name: "Greece",
+    shortName: "Greece",
+    region: "Europe",
+    jobCount: "450+ jobs",
     summary:
-      "Strong demand across energy, hospitality, healthcare, and construction — with competitive packages and clear employer sponsorship.",
+      "A booming market for hospitality and tourism professionals, with growing opportunities in IT and healthcare.",
     overview:
-      "The UAE remains one of the most active destinations for skilled overseas talent. Dubai and Abu Dhabi lead hiring across infrastructure, hospitality, healthcare, and professional services, with established relocation pathways and tax-friendly compensation for many roles.",
+      "Greece offers a vibrant lifestyle combined with strong hiring demand, particularly in its world-renowned hospitality sector. The country is also seeing steady growth in tech hubs and healthcare facilities, seeking skilled international talent to meet rising demand.",
     highlights: [
-      "High demand in engineering, nursing, and hospitality",
-      "Tax-friendly salary structures for many roles",
-      "Clear work visa processes with employer sponsorship",
-      "Fast screening cycles with multinational employers",
+      "Unmatched opportunities in luxury hospitality and tourism",
+      "Emerging tech ecosystem with demand for IT specialists",
+      "Clear pathways for seasonal and long-term employment",
+      "Excellent work-life balance in a Mediterranean setting",
     ],
-    sectors: ["Energy", "Healthcare", "Hospitality", "Construction", "IT"],
+    sectors: ["Hospitality", "IT", "Healthcare", "Warehouse"],
     topRoles: [
-      "Electrical Engineer",
+      "Hotel Manager",
+      "Executive Chef",
+      "Software Engineer",
       "Registered Nurse",
-      "Hotel Supervisor",
-      "Civil Foreman",
+      "Warehouse Manager",
+    ],
+    visaNotes:
+      "EU Blue Card and specific national work visas are available. We assist with employer sponsorship documentation and navigating the local immigration process.",
+    livingNotes:
+      "Housing varies from bustling mainland cities to picturesque islands. Many hospitality roles include accommodation, making relocation highly accessible.",
+    image:
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    slug: "finland",
+    name: "Finland",
+    shortName: "Finland",
+    region: "Europe",
+    jobCount: "320+ jobs",
+    summary:
+      "Leading the way in tech innovation and healthcare excellence, offering high living standards and robust social benefits.",
+    overview:
+      "Finland consistently ranks among the best places to live, offering excellent working conditions and strong demand for IT professionals, healthcare workers, and logistics experts. The workplace culture emphasizes equality, continuous learning, and work-life balance.",
+    highlights: [
+      "High demand for specialized IT and healthcare professionals",
+      "World-class public services and social security",
+      "English is widely spoken in the workplace, especially in tech",
+      "Strong focus on employee well-being and flexible working",
+    ],
+    sectors: ["IT", "Healthcare", "Warehouse", "Hospitality"],
+    topRoles: [
+      "Systems Administrator",
+      "General Practitioner",
+      "Logistics Coordinator",
+      "Housekeeping Supervisor",
       "IT Support Specialist",
     ],
     visaNotes:
-      "Most work visas are employer-sponsored. Once you have an offer, we help prepare documents, medicals, and entry requirements so your file moves cleanly.",
+      "Finland offers a fast-track residence permit for specialists. The process is streamlined for highly skilled workers in IT and healthcare.",
     livingNotes:
-      "Expect modern city living with high housing costs in prime areas. Many packages include accommodation or an allowance — confirm this before you accept.",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    slug: "saudi-arabia",
-    name: "Saudi Arabia",
-    shortName: "KSA",
-    region: "Middle East",
-    jobCount: "400+ jobs",
-    summary:
-      "Rapid hiring across healthcare, infrastructure, and industrial projects tied to large-scale national development.",
-    overview:
-      "Saudi Arabia’s development agenda continues to create openings for skilled professionals in healthcare, construction, engineering, and facilities. Recruitment is typically structured through licensed partners with clear onboarding steps.",
-    highlights: [
-      "Growing healthcare and construction hiring",
-      "Long-term project-based opportunities",
-      "Visa and onboarding support through employers",
-      "Strong demand for experienced supervisors",
-    ],
-    sectors: ["Healthcare", "Construction", "Oil & Gas", "Facilities", "Education"],
-    topRoles: [
-      "Registered Nurse",
-      "Site Engineer",
-      "HVAC Technician",
-      "Project Supervisor",
-      "Laboratory Technician",
-    ],
-    visaNotes:
-      "Work authorization is generally tied to your sponsoring employer. Document accuracy and medical clearance are critical before travel.",
-    livingNotes:
-      "Compounds and employer housing are common for many roles. Cultural norms and workplace expectations should be reviewed in pre-departure briefing.",
-    image:
-      "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    slug: "canada",
-    name: "Canada",
-    shortName: "Canada",
-    region: "North America",
-    jobCount: "350+ jobs",
-    summary:
-      "Skilled pathways in IT, trades, healthcare, and professional services — with longer-term career potential.",
-    overview:
-      "Canada attracts candidates seeking growth and stability. Employers often prioritize credentials, language readiness, and a realistic relocation plan. Preparation around licensing and documentation makes a measurable difference.",
-    highlights: [
-      "Demand for IT, nursing, and skilled trades",
-      "Strong focus on credentials and language",
-      "Longer-term settlement potential for many roles",
-      "Structured workplace onboarding culture",
-    ],
-    sectors: ["IT", "Healthcare", "Trades", "Finance", "Logistics"],
-    topRoles: [
-      "IT Specialist",
-      "Registered Nurse",
-      "Welder / Fabricator",
-      "Accountant",
-      "Warehouse Supervisor",
-    ],
-    visaNotes:
-      "Pathways vary by role and province. We help you understand employer-led options and documentation needed before interviews advance.",
-    livingNotes:
-      "Cost of living differs widely by city. Winter readiness, healthcare registration, and housing timelines should be planned early.",
+      "Expect a high standard of living with excellent public infrastructure. Winter readiness is essential, but the serene nature and safety make it highly rewarding.",
     image:
       "https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    slug: "uk",
-    name: "United Kingdom",
-    shortName: "UK",
+    slug: "netherlands",
+    name: "Netherlands",
+    shortName: "Netherlands",
     region: "Europe",
-    jobCount: "300+ jobs",
+    jobCount: "600+ jobs",
     summary:
-      "Openings in healthcare, hospitality, and specialist professional roles through eligible employer channels.",
+      "A central European hub for logistics, tech startups, and advanced healthcare systems with competitive expatriate benefits.",
     overview:
-      "The UK offers established hiring routes for qualified professionals, especially in healthcare and hospitality. Success often depends on meeting role eligibility, language standards, and employer sponsorship criteria.",
+      "The Netherlands is a powerhouse in logistics and supply chain management, alongside a thriving tech scene. Employers value innovation, efficiency, and international experience, making it a prime destination for skilled professionals across multiple sectors.",
     highlights: [
-      "Healthcare and hospitality demand",
-      "English-language workplace environments",
-      "Employer-led sponsorship for eligible roles",
-      "Clear professional standards and training culture",
+      "Europe's premier logistics and inventory management hub",
+      "Highly developed tech industry and startup ecosystem",
+      "30% tax ruling available for highly skilled migrants",
+      "Excellent connectivity and public transportation",
     ],
-    sectors: ["Healthcare", "Hospitality", "Social Care", "Engineering", "IT"],
+    sectors: ["Warehouse", "IT", "Healthcare", "Hospitality"],
     topRoles: [
-      "Registered Nurse",
-      "Executive Chef",
-      "Care Worker",
-      "Mechanical Technician",
-      "Software Support Analyst",
+      "Supply Chain Supervisor",
+      "Cloud Architect",
+      "Physical Therapist",
+      "Receptionist",
+      "Inventory Analyst",
     ],
     visaNotes:
-      "Eligible sponsored roles require careful matching. We guide document packs and interview prep so you meet employer and compliance expectations.",
+      "The Highly Skilled Migrant visa is a popular and efficient pathway, heavily supported by recognized employer sponsors.",
     livingNotes:
-      "Cities vary sharply in rent and commute times. Many candidates start with employer guidance on temporary housing for the first weeks.",
+      "Housing in major cities like Amsterdam or Rotterdam is highly competitive. We recommend leveraging employer assistance for initial accommodation.",
     image:
       "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    slug: "qatar",
-    name: "Qatar",
-    shortName: "Qatar",
-    region: "Middle East",
-    jobCount: "200+ jobs",
+    slug: "poland",
+    name: "Poland",
+    shortName: "Poland",
+    region: "Europe",
+    jobCount: "550+ jobs",
     summary:
-      "Ongoing needs in construction, facilities, and service operations — often with housing and transport benefits.",
+      "One of Europe's fastest-growing economies, driving massive demand in IT, warehousing, and healthcare services.",
     overview:
-      "Qatar continues to hire for infrastructure, facilities, and service roles. Packages frequently include accommodation or transport support, and screening can move quickly once profiles are shortlisted.",
+      "Poland has emerged as a major destination for tech hubs and multinational logistics centers. With competitive living costs and a rapidly modernizing infrastructure, it offers excellent career progression opportunities for ambitious professionals.",
     highlights: [
-      "Construction and facilities hiring",
-      "Often includes housing/transport benefits",
-      "Fast-moving employer screening cycles",
-      "Project-driven demand for supervisors",
+      "Rapidly expanding IT and software development sectors",
+      "Major European distribution and warehouse centers",
+      "Favorable cost of living compared to Western Europe",
+      "Vibrant cities with rich cultural heritage",
     ],
-    sectors: ["Construction", "Facilities", "Hospitality", "Logistics", "Security"],
+    sectors: ["IT", "Warehouse", "Healthcare", "Hospitality"],
     topRoles: [
-      "Construction Supervisor",
-      "Electrician",
-      "Facilities Technician",
-      "Kitchen Supervisor",
-      "Store Keeper",
+      "Cybersecurity Specialist",
+      "Forklift Operator",
+      "Medical Laboratory Technician",
+      "Food & Beverage Director",
+      "Software Engineer",
     ],
     visaNotes:
-      "Employer sponsorship is standard. Medicals and document attestation should be completed in the right order to avoid delays.",
+      "Work permits are employer-sponsored. The process is well-established, though processing times can vary depending on the voivodeship (region).",
     livingNotes:
-      "Many roles provide shared or company housing. Pre-departure briefings help with workplace norms and first-week arrival steps.",
+      "Cities like Warsaw, Krakow, and Wroclaw offer modern amenities at very accessible prices. English is commonly used in corporate environments.",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    slug: "australia",
-    name: "Australia",
-    shortName: "Australia",
-    region: "Asia-Pacific",
-    jobCount: "250+ jobs",
+    slug: "germany",
+    name: "Germany",
+    shortName: "Germany",
+    region: "Europe",
+    jobCount: "800+ jobs",
     summary:
-      "Opportunities in finance, trades, healthcare, and hospitality for credential-ready candidates.",
+      "Europe’s largest economy with robust demand for healthcare professionals, IT experts, and logistics managers.",
     overview:
-      "Australia rewards candidates with the right credentials and relocation readiness. Licensing, skills assessments, and document quality are often decisive — especially for trades and care roles.",
+      "Germany offers long-term stability and excellent social protections. The country is actively recruiting international talent to fill critical shortages in nursing, engineering, tech, and supply chain operations, supported by new, favorable immigration laws.",
     highlights: [
-      "Demand across skilled trades and care",
-      "Credential checks are often critical",
-      "Lifestyle and long-term career appeal",
-      "Strong safety and workplace standards",
+      "Massive demand for registered nurses and care workers",
+      "Strong industrial base driving IT and logistics hiring",
+      "New Opportunity Card (Chancenkarte) for job seekers",
+      "High job security and comprehensive employee benefits",
     ],
-    sectors: ["Trades", "Healthcare", "Hospitality", "Finance", "Agriculture"],
+    sectors: ["Healthcare", "IT", "Warehouse", "Hospitality"],
     topRoles: [
-      "Accountant",
-      "Chef",
-      "Aged Care Worker",
-      "Electrician",
-      "Farm Supervisor",
+      "Registered Nurse",
+      "Data Analyst",
+      "Warehouse Manager",
+      "Hotel Manager",
+      "Care Worker",
     ],
     visaNotes:
-      "Requirements depend on occupation and pathway. We help map realistic options before you invest heavily in applications.",
+      "Recent immigration reforms have simplified the process for skilled workers, making it easier to obtain the EU Blue Card or a national work visa.",
     livingNotes:
-      "Major cities are competitive for rent. Regional roles may offer faster placement and different lifestyle trade-offs.",
+      "Regional differences are significant. While Berlin offers a diverse tech scene, cities like Munich and Frankfurt are financial and industrial hubs. German language skills are highly beneficial.",
     image:
-      "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 

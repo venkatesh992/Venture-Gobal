@@ -30,8 +30,8 @@ model Job {
 
 model Application {
   id           String   @id @default(cuid())
-  jobId        String
-  job          Job      @relation(fields: [jobId], references: [id])
+  jobId        String?
+  job          Job?     @relation(fields: [jobId], references: [id])
   fullName     String
   email        String
   phone        String
@@ -152,4 +152,14 @@ model FAQ {
   isActive Boolean @default(true)
 
   @@index([category])
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  role      String   @default("ADMIN") // SUPERADMIN, ADMIN
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

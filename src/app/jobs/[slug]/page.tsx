@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { SubmitCVForm } from "@/components/forms/SubmitCVForm";
 
 const jobs = [
   {
@@ -193,10 +194,19 @@ export default async function JobDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      <PageCTA
-        title="Interested in this role?"
-        description="Contact us with your CV and preferred timeline — we’ll guide screening, documents, and next steps."
-      />
+      <section id="apply" className="section border-t border-white/5 bg-background">
+        <div className="container-custom max-w-2xl">
+          <div className="rounded-[var(--radius-lg)] border border-white/10 bg-surface/30 p-6 shadow-sm md:p-10">
+            <h2 className="font-display mb-2 text-2xl font-semibold text-foreground">
+              Apply for this position
+            </h2>
+            <p className="mb-8 text-[15px] text-muted">
+              Submit your CV for the {job.title} role at {job.company}.
+            </p>
+            <SubmitCVForm jobId={job.slug} />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

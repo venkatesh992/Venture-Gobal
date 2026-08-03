@@ -18,11 +18,11 @@ const sans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "VG Recruitment Agency — Your Gateway to Global Careers",
-    template: "%s | VG Recruitment Agency",
+    default: "Venturoedge Agency — Your Gateway to Global Careers",
+    template: "%s | Venturoedge Agency",
   },
   description:
-    "VG Recruitment Agency connects skilled professionals with top international employers. Find overseas jobs, training courses, and expert guidance for your global career journey.",
+    "Venturoedge Agency connects skilled professionals with top international employers. Find overseas jobs, training courses, and expert guidance for your global career journey.",
   keywords: [
     "recruitment agency",
     "overseas jobs",
@@ -35,12 +35,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "VG Recruitment Agency",
-    title: "VG Recruitment Agency — Your Gateway to Global Careers",
+    siteName: "Venturoedge Agency",
+    title: "Venturoedge Agency — Your Gateway to Global Careers",
     description:
       "Connect with top international employers. Find overseas jobs, training, and expert career guidance.",
   },
 };
+
+import { MainWrapper } from "@/components/layout/MainWrapper";
 
 export default function RootLayout({
   children,
@@ -54,7 +56,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <Header />
-        <main className="flex-1 pt-[72px]">{children}</main>
+        <MainWrapper>{children}</MainWrapper>
         <Footer />
       </body>
     </html>

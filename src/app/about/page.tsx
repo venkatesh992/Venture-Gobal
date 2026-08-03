@@ -5,7 +5,7 @@ import { PageCTA, PageHero, SectionHeader } from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about VG Recruitment Agency — how we help skilled professionals find overseas careers with trusted employers.",
+    "Learn about Venturoedge Agency — how we help skilled professionals find overseas careers with trusted employers.",
 };
 
 const values = [
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <PageHero
         label="About VG"
         title="A recruitment partner for global careers"
-        description="VG Recruitment connects skilled professionals with international employers — and stays with you through documents, interviews, visas, and departure."
+        description="Venturoedge connects skilled professionals with international employers — and stays with you through documents, interviews, visas, and departure."
         actions={
           <>
             <Link href="/contact" className="btn btn-lg btn-primary">
@@ -64,7 +64,7 @@ export default function AboutPage() {
               to relocate.
             </p>
             <p>
-              VG Recruitment bridges both sides. We combine job matching with
+              Venturoedge bridges both sides. We combine job matching with
               the services that make a move possible — counselling, interview
               prep, document processing, visa guidance, and pre-departure
               support.

@@ -6,7 +6,7 @@ import { DestinationsExplorer } from "@/components/destinations/DestinationsExpl
 export const metadata: Metadata = {
   title: "Destinations",
   description:
-    "Explore overseas job destinations including UAE, Saudi Arabia, Canada, UK, Qatar, and Australia with VG Recruitment.",
+    "Explore overseas job destinations including UAE, Saudi Arabia, Canada, UK, Qatar, and Australia with Venturoedge.",
 };
 
 export default function DestinationsPage() {

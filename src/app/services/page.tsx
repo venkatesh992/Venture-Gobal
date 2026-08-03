@@ -7,7 +7,7 @@ import { services } from "@/lib/content/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Visa assistance, document processing, interview prep, career counselling, and job placement support from VG Recruitment.",
+    "Visa assistance, document processing, interview prep, career counselling, and job placement support from Venturoedge.",
 };
 
 export default function ServicesPage() {
