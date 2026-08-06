@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { CTABanner } from "@/components/home/CTABanner";
+import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Training",
@@ -36,6 +37,13 @@ const courses = [
     duration: "3 weeks",
     summary:
       "Patient-facing communication and documentation language for nursing and care roles.",
+  },
+  {
+    title: "German Language Training (A1-B2)",
+    category: "Language",
+    duration: "12 weeks",
+    summary:
+      "Intensive German language preparation tailored for healthcare and technical professionals relocating to Germany.",
   },
 ];
 
@@ -85,10 +93,7 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      <PageCTA
-        title="Need a course recommendation?"
-        description="Tell us your target role and country — we’ll suggest the right preparation path."
-      />
+      <CTABanner />
     </>
   );
 }

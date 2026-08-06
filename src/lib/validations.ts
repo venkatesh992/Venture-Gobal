@@ -15,13 +15,19 @@ export const contactFormSchema = z.object({
 
 // Job application form schema
 export const jobApplicationSchema = z.object({
-  fullName: z.string().min(2, "Full name is required"),
+  firstName: z.string().min(2, "First name is required"),
+  lastName: z.string().min(2, "Last name is required"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Phone number must be at least 10 digits"),
-  dateOfBirth: z.string().optional(),
-  experience: z.string().optional(),
-  currentJob: z.string().optional(),
+  countryOfResidence: z.string().optional(),
+  nationality: z.string().optional(),
+  designation: z.string().optional(),
+  currentCompany: z.string().optional(),
+  gccExperience: z.string().optional(),
+  otherExperience: z.string().optional(),
+  currentSalary: z.string().optional(),
   expectedSalary: z.string().optional(),
+  noticePeriod: z.string().optional(),
   resumeUrl: z.string().optional(),
   passportCopy: z.string().optional(),
 });

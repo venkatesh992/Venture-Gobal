@@ -5,6 +5,7 @@ import {
   Scale,
   BriefcaseBusiness,
   GraduationCap,
+  HeartHandshake,
   type LucideIcon,
 } from "lucide-react";
 
@@ -247,6 +248,44 @@ export const services: Service[] = [
       "Candidates with a confirmed start date abroad",
       "First-time international workers",
       "Anyone wanting structured departure preparation",
+    ],
+  },
+  {
+    slug: "post-departure-support",
+    title: "Post Departure Support",
+    shortTitle: "Post-departure",
+    summary:
+      "Ongoing assistance after arrival to ensure smooth integration into your new workplace and community.",
+    description:
+      "Our commitment doesn't end when your flight takes off. We provide continued support during your first critical months abroad, helping you navigate local registration, housing basics, and early workplace integration.",
+    icon: HeartHandshake,
+    outcomes: [
+      "Assistance with local civil registration and IDs",
+      "Guidance on opening bank accounts and securing housing",
+      "Check-ins to ensure workplace integration",
+      "Emergency contact support and legal rights briefing",
+    ],
+    process: [
+      {
+        title: "Arrival Check-in",
+        detail:
+          "Immediate follow-up upon arrival to ensure safe landing and initial accommodation.",
+      },
+      {
+        title: "Settling In",
+        detail:
+          "Guidance for essential local tasks like banking, phone lines, and local ID.",
+      },
+      {
+        title: "Ongoing Monitoring",
+        detail:
+          "Regular touchpoints during your first 90 days to resolve any teething issues.",
+      },
+    ],
+    whoFor: [
+      "Recently relocated professionals",
+      "Candidates adapting to a new cultural environment",
+      "Workers needing help navigating local bureaucracy",
     ],
   },
 ];

@@ -144,18 +144,33 @@ export function SubmitCVForm({ jobId, onSuccess }: SubmitCVFormProps) {
 
       <div className="grid gap-5 md:grid-cols-2">
         <motion.div variants={itemVariants} className="space-y-1.5">
-          <label htmlFor="fullName" className="text-[12px] font-medium leading-none text-foreground/80">
-            Full Name *
+          <label htmlFor="firstName" className="text-[12px] font-medium leading-none text-foreground/80">
+            First Name *
           </label>
           <input
-            id="fullName"
-            {...register("fullName")}
+            id="firstName"
+            {...register("firstName")}
             className={inputClasses}
-            placeholder="John Doe"
+            placeholder="John"
           />
-          {errors.fullName && <p className="text-[11px] text-destructive">{errors.fullName.message}</p>}
+          {errors.firstName && <p className="text-[11px] text-destructive">{errors.firstName.message}</p>}
         </motion.div>
 
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="lastName" className="text-[12px] font-medium leading-none text-foreground/80">
+            Last Name *
+          </label>
+          <input
+            id="lastName"
+            {...register("lastName")}
+            className={inputClasses}
+            placeholder="Doe"
+          />
+          {errors.lastName && <p className="text-[11px] text-destructive">{errors.lastName.message}</p>}
+        </motion.div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
         <motion.div variants={itemVariants} className="space-y-1.5">
           <label htmlFor="email" className="text-[12px] font-medium leading-none text-foreground/80">
             Email Address *
@@ -169,9 +184,7 @@ export function SubmitCVForm({ jobId, onSuccess }: SubmitCVFormProps) {
           />
           {errors.email && <p className="text-[11px] text-destructive">{errors.email.message}</p>}
         </motion.div>
-      </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
         <motion.div variants={itemVariants} className="space-y-1.5">
           <label htmlFor="phone" className="text-[12px] font-medium leading-none text-foreground/80">
             Phone Number *
@@ -184,19 +197,123 @@ export function SubmitCVForm({ jobId, onSuccess }: SubmitCVFormProps) {
           />
           {errors.phone && <p className="text-[11px] text-destructive">{errors.phone.message}</p>}
         </motion.div>
+      </div>
 
+      <div className="grid gap-5 md:grid-cols-2">
         <motion.div variants={itemVariants} className="space-y-1.5">
-          <label htmlFor="experience" className="text-[12px] font-medium leading-none text-foreground/80">
-            Years of Experience
+          <label htmlFor="countryOfResidence" className="text-[12px] font-medium leading-none text-foreground/80">
+            Country Of Residence
           </label>
           <input
-            id="experience"
-            {...register("experience")}
+            id="countryOfResidence"
+            {...register("countryOfResidence")}
             className={inputClasses}
-            placeholder="e.g. 5 Years"
+            placeholder="UAE"
+          />
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="nationality" className="text-[12px] font-medium leading-none text-foreground/80">
+            Nationality
+          </label>
+          <input
+            id="nationality"
+            {...register("nationality")}
+            className={inputClasses}
+            placeholder="e.g. Indian, British"
           />
         </motion.div>
       </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="designation" className="text-[12px] font-medium leading-none text-foreground/80">
+            Designation / Role
+          </label>
+          <input
+            id="designation"
+            {...register("designation")}
+            className={inputClasses}
+            placeholder="Electrician"
+          />
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="currentCompany" className="text-[12px] font-medium leading-none text-foreground/80">
+            Current Company Name
+          </label>
+          <input
+            id="currentCompany"
+            {...register("currentCompany")}
+            className={inputClasses}
+            placeholder="ABC Corp"
+          />
+        </motion.div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="gccExperience" className="text-[12px] font-medium leading-none text-foreground/80">
+            Total GCC Experience
+          </label>
+          <input
+            id="gccExperience"
+            {...register("gccExperience")}
+            className={inputClasses}
+            placeholder="e.g. 3 Years"
+          />
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="otherExperience" className="text-[12px] font-medium leading-none text-foreground/80">
+            Other Experience
+          </label>
+          <input
+            id="otherExperience"
+            {...register("otherExperience")}
+            className={inputClasses}
+            placeholder="e.g. 2 Years in Home Country"
+          />
+        </motion.div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="currentSalary" className="text-[12px] font-medium leading-none text-foreground/80">
+            Current Salary
+          </label>
+          <input
+            id="currentSalary"
+            {...register("currentSalary")}
+            className={inputClasses}
+            placeholder="e.g. 5000 AED"
+          />
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="space-y-1.5">
+          <label htmlFor="expectedSalary" className="text-[12px] font-medium leading-none text-foreground/80">
+            Expected Salary
+          </label>
+          <input
+            id="expectedSalary"
+            {...register("expectedSalary")}
+            className={inputClasses}
+            placeholder="e.g. 7000 AED"
+          />
+        </motion.div>
+      </div>
+
+      <motion.div variants={itemVariants} className="space-y-1.5">
+        <label htmlFor="noticePeriod" className="text-[12px] font-medium leading-none text-foreground/80">
+          Notice Period
+        </label>
+        <input
+          id="noticePeriod"
+          {...register("noticePeriod")}
+          className={inputClasses}
+          placeholder="e.g. 30 Days"
+        />
+      </motion.div>
 
       <motion.div variants={itemVariants} className="space-y-3 pt-2">
         <div className="flex items-center justify-between">

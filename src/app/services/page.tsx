@@ -1,7 +1,8 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
@@ -66,10 +67,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <PageCTA
-        title="Not sure which service you need?"
-        description="Tell us your situation — we’ll recommend the right path across jobs, visas, documents, and training."
-      />
+      <CTABanner />
     </>
   );
 }

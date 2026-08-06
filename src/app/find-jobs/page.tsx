@@ -1,7 +1,8 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Find Jobs",
@@ -127,10 +128,7 @@ export default function FindJobsPage() {
         </div>
       </section>
 
-      <PageCTA
-        title="Don’t see the right role yet?"
-        description="Share your profile and preferred countries — we’ll match you to openings as they open."
-      />
+      <CTABanner />
     </>
   );
 }

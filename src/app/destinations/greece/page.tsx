@@ -1,3 +1,4 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +14,7 @@ export default function GreeceDestinationPage() {
   return (
     <>
       {/* Bespoke Greece Hero */}
-      <section className="relative -mt-[72px] flex min-h-[90svh] flex-col justify-end overflow-hidden pb-12">
+      <section className="relative -mt-[72px] flex min-h-[70svh] flex-col justify-end overflow-hidden pb-10">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80"
@@ -23,11 +24,11 @@ export default function GreeceDestinationPage() {
             className="object-cover scale-105 animate-in fade-in zoom-in duration-1000"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-sky-950/30 via-sky-950/50 to-slate-950/95 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/50 to-primary/95 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
         </div>
 
-        <div className="relative z-10 container-custom w-full pt-32">
+        <div className="relative z-10 container-custom w-full pt-28">
           <div className="max-w-4xl">
             <span className="inline-flex items-center justify-center gap-1.5 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-sky-300 backdrop-blur-md mb-6">
               The Mediterranean Hub
@@ -191,31 +192,7 @@ export default function GreeceDestinationPage() {
         </div>
       </section>
 
-      {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-16 md:py-20">
-        <div className="container-custom relative z-10 text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-lg max-w-3xl mx-auto leading-tight">
-            Ready for your Mediterranean career?
-          </h2>
-          <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto font-light">
-            Skip the generic job boards. Get placed directly into Greece's top resorts through Venture Global's exclusive network.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link
-              href="/find-jobs?country=Greece"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] bg-sky-500 px-10 py-4 text-[16px] font-bold text-slate-900 shadow-xl transition-transform hover:scale-105"
-            >
-              Apply Now
-            </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] border border-white/20 bg-white/5 px-10 py-4 text-[16px] font-bold text-white backdrop-blur-md transition-colors hover:bg-white/10"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTABanner />
     </>
   );
 }

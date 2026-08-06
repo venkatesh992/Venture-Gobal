@@ -17,7 +17,7 @@ export function PageHero({
   image = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-border-light bg-slate-950 text-white min-h-[40vh] flex flex-col justify-end">
+    <section className="relative overflow-hidden border-b border-border-light bg-primary text-white min-h-[40vh] flex flex-col justify-end">
       <div className="absolute inset-0">
         <Image
           src={image}
@@ -27,8 +27,8 @@ export function PageHero({
           className="object-cover scale-105"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/20 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent" />
       </div>
       <div className="container-custom relative py-16 md:py-20 lg:py-24 mt-auto">
         {label ? (

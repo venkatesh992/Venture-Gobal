@@ -1,3 +1,4 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +13,7 @@ export default function PolandDestinationPage() {
   return (
     <>
       {/* Bespoke Poland Hero */}
-      <section className="relative -mt-[72px] flex min-h-[90svh] flex-col justify-end overflow-hidden pb-12">
+      <section className="relative -mt-[72px] flex min-h-[70svh] flex-col justify-end overflow-hidden pb-10">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=1600&q=80"
@@ -22,11 +23,11 @@ export default function PolandDestinationPage() {
             className="object-cover scale-105 animate-in fade-in zoom-in duration-1000"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-rose-950/40 via-rose-950/50 to-slate-950/95 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/50 to-primary/95 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
         </div>
 
-        <div className="relative z-10 container-custom w-full pt-32">
+        <div className="relative z-10 container-custom w-full pt-28">
           <div className="max-w-4xl">
             <span className="inline-flex items-center justify-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-rose-400 backdrop-blur-md mb-6">
               Europe's Economic Miracle
@@ -206,41 +207,7 @@ export default function PolandDestinationPage() {
         </div>
       </section>
 
-      {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-16 md:py-20">
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=1600&q=80"
-            alt="Poland"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-rose-950/80 mix-blend-multiply" />
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-lg max-w-3xl mx-auto leading-tight">
-            Ready to upgrade your career?
-          </h2>
-          <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto font-light">
-            Tap into Europe's fastest-growing job market. We secure your contract and handle all Polish immigration paperwork.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link
-              href="/find-jobs?country=Poland"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] bg-rose-600 px-10 py-4 text-[16px] font-bold text-white shadow-xl transition-transform hover:scale-105"
-            >
-              Apply Now
-            </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] border border-white/20 bg-white/5 px-10 py-4 text-[16px] font-bold text-white backdrop-blur-md transition-colors hover:bg-white/10"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTABanner />
     </>
   );
 }

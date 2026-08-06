@@ -3,7 +3,7 @@ import { BriefcaseIcon, Users } from "lucide-react";
 
 export function CTABanner() {
   return (
-    <section className="bg-slate-50 py-20 md:py-32 overflow-hidden">
+    <section className="bg-slate-50 py-10 md:py-16 overflow-hidden">
       <div className="container-custom max-w-[1440px]">
         {/* Single Wide Card Container */}
         <div className="relative bg-white rounded-[2.5rem] md:rounded-[3.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden">
@@ -36,7 +36,7 @@ export function CTABanner() {
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100/50">
             
             {/* Candidate CTA */}
-            <div className="p-10 md:p-20 flex flex-col justify-center items-center text-center group">
+            <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center group">
               <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 ease-out shadow-sm border border-blue-100">
                 <BriefcaseIcon size={32} strokeWidth={1.5} />
               </div>
@@ -55,7 +55,7 @@ export function CTABanner() {
             </div>
 
             {/* Employer CTA */}
-            <div className="p-10 md:p-20 flex flex-col justify-center items-center text-center group">
+            <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center group">
               <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 ease-out shadow-sm border border-emerald-100">
                 <Users size={32} strokeWidth={1.5} />
               </div>

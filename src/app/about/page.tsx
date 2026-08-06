@@ -1,6 +1,7 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageCTA, PageHero, SectionHeader } from "@/components/ui/PageHero";
+import { PageHero, SectionHeader } from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -101,7 +102,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <PageCTA />
+      <CTABanner />
     </>
   );
 }

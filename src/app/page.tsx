@@ -12,10 +12,10 @@ export default function HomePage() {
       <HeroSection />
       <StatsCounter />
       <FeaturedIndustries />
+      <CTABanner />
       <WhyChooseUs />
       <DestinationsPreview />
       <TestimonialCarousel />
-      <CTABanner />
     </>
   );
 }

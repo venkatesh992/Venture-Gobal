@@ -1,3 +1,4 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +14,7 @@ export default function NetherlandsDestinationPage() {
   return (
     <>
       {/* Bespoke Netherlands Hero */}
-      <section className="relative -mt-[72px] flex min-h-[90svh] flex-col justify-end overflow-hidden pb-12">
+      <section className="relative -mt-[72px] flex min-h-[70svh] flex-col justify-end overflow-hidden pb-10">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80"
@@ -23,11 +24,11 @@ export default function NetherlandsDestinationPage() {
             className="object-cover scale-105 animate-in fade-in zoom-in duration-1000"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-950/40 via-blue-950/50 to-slate-950/95 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/50 to-primary/95 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
         </div>
 
-        <div className="relative z-10 container-custom w-full pt-32">
+        <div className="relative z-10 container-custom w-full pt-28">
           <div className="max-w-4xl">
             <span className="inline-flex items-center justify-center gap-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-400 backdrop-blur-md mb-6">
               The Innovation Capital
@@ -225,33 +226,7 @@ export default function NetherlandsDestinationPage() {
         </div>
       </section>
 
-      {/* High-Converting Bottom CTA */}
-      <section className="relative overflow-hidden bg-orange-600 py-16 md:py-20">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
-        
-        <div className="container-custom relative z-10 text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-lg max-w-3xl mx-auto leading-tight">
-            Ready to secure your Dutch future?
-          </h2>
-          <p className="mt-6 text-xl text-white/90 max-w-2xl mx-auto font-medium">
-            Let Venture Global secure your role, sponsor your Highly Skilled Migrant visa, and optimize your 30% tax ruling.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link
-              href="/find-jobs?country=Netherlands"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] bg-white px-10 py-4 text-[16px] font-bold text-orange-600 shadow-xl transition-transform hover:scale-105"
-            >
-              Apply Now
-            </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-[var(--radius-md)] border border-white/30 bg-white/10 px-10 py-4 text-[16px] font-bold text-white backdrop-blur-md transition-colors hover:bg-white/20"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTABanner />
     </>
   );
 }

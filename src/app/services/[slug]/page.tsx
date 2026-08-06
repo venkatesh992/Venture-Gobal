@@ -1,8 +1,9 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
-import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
 import {
   getAllServiceSlugs,
   getServiceBySlug,
@@ -155,7 +156,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      <PageCTA />
+      <CTABanner />
     </>
   );
 }

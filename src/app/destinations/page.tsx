@@ -1,6 +1,7 @@
+import { CTABanner } from "@/components/home/CTABanner";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageCTA, PageHero } from "@/components/ui/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
 import { DestinationsExplorer } from "@/components/destinations/DestinationsExplorer";
 
 export const metadata: Metadata = {
@@ -70,10 +71,7 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      <PageCTA
-        title="Not sure which country fits you?"
-        description="Share your skills and constraints — we’ll shortlist destinations that are realistic for your profile."
-      />
+      <CTABanner />
     </>
   );
 }
