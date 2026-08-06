@@ -124,13 +124,13 @@ export default async function AdminApplicationsPage() {
                         {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(app.createdAt))}
                       </td>
                       <td className="px-5 py-4 text-right">
-                        <div className="flex items-center justify-end gap-2 text-muted-light opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="flex items-center justify-end gap-2 text-muted-light">
                           <Link href={`/admin/applications/${app.id}`} className="p-1.5 hover:text-foreground hover:bg-slate-100 rounded-md transition-colors" title="View Details">
                             <Eye className="h-4 w-4" />
                           </Link>
-                          <button className="p-1.5 hover:text-foreground hover:bg-slate-100 rounded-md transition-colors" title="Edit">
+                          <Link href={`/admin/applications/${app.id}/edit`} className="p-1.5 hover:text-foreground hover:bg-slate-100 rounded-md transition-colors" title="Edit">
                             <Edit2 className="h-4 w-4" />
-                          </button>
+                          </Link>
                           <button className="p-1.5 hover:text-foreground hover:bg-slate-100 rounded-md transition-colors">
                             <MoreVertical className="h-4 w-4" />
                           </button>

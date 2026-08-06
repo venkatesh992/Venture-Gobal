@@ -32,6 +32,11 @@ export const jobApplicationSchema = z.object({
   passportCopy: z.string().optional(),
 });
 
+// Schema for editing an existing application (adds status)
+export const editApplicationSchema = jobApplicationSchema.extend({
+  status: z.enum(["pending", "shortlisted", "rejected", "active"]).optional(),
+});
+
 // Course enrollment schema
 export const enrollmentSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
@@ -43,4 +48,5 @@ export const enrollmentSchema = z.object({
 // Type exports
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 export type JobApplicationData = z.infer<typeof jobApplicationSchema>;
+export type EditApplicationData = z.infer<typeof editApplicationSchema>;
 export type EnrollmentData = z.infer<typeof enrollmentSchema>;

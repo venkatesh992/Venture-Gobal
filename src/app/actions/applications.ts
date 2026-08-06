@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
-import { jobApplicationSchema } from "@/lib/validations";
+import { jobApplicationSchema, editApplicationSchema } from "@/lib/validations";
 import fs from "fs/promises";
 import path from "path";
 
@@ -76,5 +76,38 @@ export async function submitApplication(data: unknown, jobId?: string) {
   } catch (error) {
     console.error("Error submitting application:", error);
     return { success: false, error: "Failed to submit application. Please try again." };
+  }
+}
+
+export async function updateApplication(id: string, data: unknown) {
+  try {
+    const parsedData = editApplicationSchema.parse(data);
+
+    const application = await prisma.application.update({
+      where: { id },
+      data: {
+        firstName: parsedData.firstName,
+        lastName: parsedData.lastName,
+        email: parsedData.email,
+        phone: parsedData.phone,
+        countryOfResidence: parsedData.countryOfResidence,
+        nationality: parsedData.nationality,
+        designation: parsedData.designation,
+        currentCompany: parsedData.currentCompany,
+        gccExperience: parsedData.gccExperience,
+        otherExperience: parsedData.otherExperience,
+        currentSalary: parsedData.currentSalary,
+        expectedSalary: parsedData.expectedSalary,
+        noticePeriod: parsedData.noticePeriod,
+        status: parsedData.status,
+      },
+    });
+
+    revalidatePath("/admin/applications");
+    revalidatePath(`/admin/applications/${id}`);
+    return { success: true, application };
+  } catch (error) {
+    console.error("Error updating application:", error);
+    return { success: false, error: "Failed to update application. Please try again." };
   }
 }
