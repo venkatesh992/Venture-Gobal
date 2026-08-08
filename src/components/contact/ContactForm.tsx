@@ -1,13 +1,42 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactSchema, type ContactData } from "@/lib/validations";
+import { submitContact } from "@/app/actions/contact";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactData>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactData) => {
+    setIsSubmitting(true);
+    setError(null);
+    
+    try {
+      const result = await submitContact(data);
+      if (result.success) {
+        setSubmitted(true);
+        reset();
+      } else {
+        setError(result.error || "Failed to submit message");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -31,13 +60,23 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      {error && (
+        <div className="rounded-md bg-red-50 p-4 mb-6 border border-red-200">
+          <p className="text-sm text-red-600">{error}</p>
+        </div>
+      )}
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
           <span className="mb-1.5 block text-sm font-medium text-foreground">
             Full name
           </span>
-          <input className="input" name="name" required placeholder="Your name" />
+          <input 
+            className="input" 
+            {...register("name")}
+            placeholder="Your name" 
+          />
+          {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>}
         </label>
         <label className="block">
           <span className="mb-1.5 block text-sm font-medium text-foreground">
@@ -46,10 +85,10 @@ export function ContactForm() {
           <input
             className="input"
             type="email"
-            name="email"
-            required
+            {...register("email")}
             placeholder="you@email.com"
           />
+          {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>}
         </label>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
@@ -57,7 +96,12 @@ export function ContactForm() {
           <span className="mb-1.5 block text-sm font-medium text-foreground">
             Phone
           </span>
-          <input className="input" name="phone" placeholder="+91 ..." />
+          <input 
+            className="input" 
+            {...register("phone")}
+            placeholder="+91 ..." 
+          />
+          {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone.message}</p>}
         </label>
         <label className="block">
           <span className="mb-1.5 block text-sm font-medium text-foreground">
@@ -65,9 +109,10 @@ export function ContactForm() {
           </span>
           <input
             className="input"
-            name="subject"
+            {...register("subject")}
             placeholder="Jobs, visa, training..."
           />
+          {errors.subject && <p className="mt-1 text-xs text-red-500">{errors.subject.message}</p>}
         </label>
       </div>
       <label className="block">
@@ -75,15 +120,19 @@ export function ContactForm() {
           Message
         </span>
         <textarea
-          name="message"
-          required
+          {...register("message")}
           rows={5}
           placeholder="Tell us about your goals, skills, and preferred countries."
           className="w-full rounded-[var(--radius-md)] border border-border bg-white px-4 py-3 text-sm text-foreground outline-none transition-[border-color,box-shadow] placeholder:text-muted-light focus:border-primary focus:shadow-[0_0_0_4px_rgb(37_99_235_/_0.12)]"
         />
+        {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>}
       </label>
-      <button type="submit" className="btn btn-primary btn-lg w-full sm:w-auto">
-        Send message
+      <button 
+        type="submit" 
+        className="btn btn-primary btn-lg w-full sm:w-auto"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Send message"}
       </button>
     </form>
   );

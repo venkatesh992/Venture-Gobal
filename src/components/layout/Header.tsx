@@ -8,11 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Find Jobs", href: "/find-jobs" },
-  { label: "Training", href: "/training" },
   { label: "Destinations", href: "/destinations" },
   { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -62,8 +59,8 @@ export function Header() {
             </ul>
 
             <div className="flex items-center gap-3">
-              <Link href="/find-jobs" className="site-header-cta hidden md:inline-flex">
-                Explore jobs
+              <Link href="/contact" className="site-header-cta hidden md:inline-flex">
+                Talk with an expert
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
@@ -120,11 +117,11 @@ export function Header() {
                 </div>
                 <div className="border-t border-border-light px-6 py-5">
                   <Link
-                    href="/find-jobs"
+                    href="/contact"
                     onClick={closeMobileMenu}
                     className="btn btn-primary w-full"
                   >
-                    Explore jobs
+                    Talk with an expert
                   </Link>
                 </div>
               </div>

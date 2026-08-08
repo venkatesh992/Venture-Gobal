@@ -32,7 +32,6 @@ export default function ServicesPage() {
           </>
         }
       />
-
       <section className="section bg-surface">
         <div className="container-custom">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -41,7 +40,7 @@ export default function ServicesPage() {
               return (
                 <Link
                   key={service.slug}
-                  href={`/services/${service.slug}`}
+                  href={service.customHref || `/services/${service.slug}`}
                   className="group flex flex-col rounded-[var(--radius-lg)] bg-background p-7 transition-colors hover:bg-primary-50 md:p-8"
                 >
                   <span className="grid h-12 w-12 place-items-center rounded-[var(--radius-md)] bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">

@@ -45,8 +45,28 @@ export const enrollmentSchema = z.object({
   batch: z.string().optional(),
 });
 
+// Recruiter form schema
+export const recruiterSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  company: z.string().optional(),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
 // Type exports
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 export type JobApplicationData = z.infer<typeof jobApplicationSchema>;
 export type EditApplicationData = z.infer<typeof editApplicationSchema>;
 export type EnrollmentData = z.infer<typeof enrollmentSchema>;
+export type RecruiterData = z.infer<typeof recruiterSchema>;
+
+export const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().optional(),
+  subject: z.string().optional(),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+export type ContactData = z.infer<typeof contactSchema>;

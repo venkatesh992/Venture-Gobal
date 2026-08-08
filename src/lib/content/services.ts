@@ -19,6 +19,7 @@ export type Service = {
   outcomes: string[];
   process: { title: string; detail: string }[];
   whoFor: string[];
+  customHref?: string;
 };
 
 export const services: Service[] = [
@@ -287,6 +288,42 @@ export const services: Service[] = [
       "Candidates adapting to a new cultural environment",
       "Workers needing help navigating local bureaucracy",
     ],
+  },
+  {
+    slug: "training",
+    title: "Training",
+    shortTitle: "Training",
+    summary:
+      "Skill-building and language courses designed to prepare you for international opportunities.",
+    description:
+      "Upgrade your professional and language skills to meet the standards of global employers. We offer curated training programs to ensure you are fully prepared for the challenges of an overseas career.",
+    icon: GraduationCap,
+    outcomes: [
+      "Industry-recognized certifications",
+      "Language proficiency for your destination",
+      "Confidence in global workplace norms",
+      "Higher success rate in international interviews",
+    ],
+    process: [
+      {
+        title: "Skill assessment",
+        detail: "Identify areas for improvement based on your target role.",
+      },
+      {
+        title: "Customized learning",
+        detail: "Enroll in modules tailored to your specific needs.",
+      },
+      {
+        title: "Certification",
+        detail: "Earn credentials that strengthen your profile.",
+      },
+    ],
+    whoFor: [
+      "Candidates looking to upskill",
+      "Professionals needing language certification",
+      "First-time overseas job seekers",
+    ],
+    customHref: "/training",
   },
 ];
 

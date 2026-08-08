@@ -69,14 +69,14 @@ export function WhyChooseUs() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/employers" 
-                className="inline-flex justify-center items-center h-14 px-8 rounded-full bg-[#0D34E9] text-white font-bold hover:bg-blue-800 transition-colors shadow-[0_8px_20px_rgba(13,52,233,0.25)] hover:shadow-[0_12px_25px_rgba(13,52,233,0.35)]"
+                href="/recruiters" 
+                className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-[#04255A] text-white font-bold hover:bg-[#02183D] transition-all shadow-[0_8px_20px_rgba(4,37,90,0.25)] hover:shadow-[0_12px_25px_rgba(4,37,90,0.35)] hover:-translate-y-1 text-[15px]"
               >
-                Hire Global Talent
+                Join as Recruiter
               </Link>
               <Link 
                 href="/about" 
-                className="inline-flex justify-center items-center h-14 px-8 rounded-full bg-white text-slate-700 border border-slate-200 font-bold hover:bg-slate-50 hover:border-slate-300 transition-colors"
+                className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-8 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 text-[15px]"
               >
                 Learn About Us
               </Link>

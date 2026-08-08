@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { BriefcaseIcon, Users } from "lucide-react";
+import { BriefcaseIcon, Users, UserPlus } from "lucide-react";
 
-export function CTABanner() {
+interface CTABannerProps {
+  className?: string;
+}
+
+export function CTABanner({ className = "bg-white" }: CTABannerProps) {
   return (
-    <section className="bg-slate-50 py-10 md:py-16 overflow-hidden">
+    <section className={`${className} py-10 md:py-16 overflow-hidden`}>
       <div className="container-custom max-w-[1440px]">
         {/* Single Wide Card Container */}
         <div className="relative bg-white rounded-[2.5rem] md:rounded-[3.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden">
@@ -54,7 +58,7 @@ export function CTABanner() {
               </Link>
             </div>
 
-            {/* Employer CTA */}
+            {/* Employer & Recruiter CTA */}
             <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center group">
               <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 ease-out shadow-sm border border-emerald-100">
                 <Users size={32} strokeWidth={1.5} />
@@ -65,12 +69,14 @@ export function CTABanner() {
               <p className="text-slate-500 mb-10 max-w-sm text-lg leading-relaxed">
                 Partner with us to source, vet, and relocate top-tier professionals for your organization.
               </p>
-              <Link 
-                href="/employers" 
-                className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
-              >
-                Request Staffing
-              </Link>
+              <div className="flex w-full sm:w-auto justify-center">
+                <Link 
+                  href="/recruiters" 
+                  className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-8 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
+                >
+                  Join as Recruiter
+                </Link>
+              </div>
             </div>
 
           </div>

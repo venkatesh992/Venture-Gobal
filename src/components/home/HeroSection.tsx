@@ -48,11 +48,11 @@ export function HeroSection() {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 w-full max-w-lg">
-                <Link href="/find-jobs" className="bg-[#0D34E9] hover:bg-[#0926B0] text-white h-14 px-8 rounded-2xl font-semibold transition-colors w-full sm:w-auto shadow-lg shadow-blue-900/20 flex items-center justify-center text-[15px]">
-                  Explore open roles
+                <Link href="/about" className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-10 rounded-full bg-[#04255A] text-white font-bold hover:bg-[#02183D] transition-all shadow-[0_8px_20px_rgba(4,37,90,0.25)] hover:shadow-[0_12px_25px_rgba(4,37,90,0.35)] hover:-translate-y-1 text-[15px]">
+                  Learn about us
                 </Link>
-                <Link href="/contact" className="bg-white border-2 border-slate-200 text-slate-700 hover:border-[#0D34E9] hover:text-[#0D34E9] h-14 px-8 rounded-2xl font-semibold transition-colors w-full sm:w-auto flex items-center justify-center text-[15px]">
-                  Talk to a consultant
+                <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-8 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 text-[15px]">
+                  Talk with an expert
                 </Link>
               </div>
 
@@ -61,12 +61,12 @@ export function HeroSection() {
 
             {/* Right Column - Image Collage */}
             <div className="lg:col-span-5 relative h-[400px] sm:h-[500px] w-full animate-hero-copy-delay lg:translate-x-4">
-              <div className="grid grid-cols-2 gap-4 h-full relative z-10">
+              <div className="grid grid-cols-3 gap-4 h-full relative z-10">
                 {/* Left tall image (White Collar) */}
-                <div className="relative h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
-                  <Image
-                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
-                    alt="Indian IT Professional"
+                <div className="col-span-2 relative h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
+                    <Image
+                      src="/global-handshake.jpg"
+                      alt="Global Corporate Handshake"
                     fill
                     priority
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -106,7 +106,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Recruitment Badge */}
-              <div className="absolute top-[35%] -left-8 sm:-left-12 z-20 bg-white/95 backdrop-blur-md px-5 py-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-4 animate-[float_4s_ease-in-out_infinite]">
+              <div className="absolute bottom-8 -right-4 sm:-right-8 z-20 bg-white/95 backdrop-blur-md px-5 py-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-4 animate-[float_4s_ease-in-out_infinite]">
                 <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                   <Briefcase size={22} strokeWidth={2.5} />
                 </div>

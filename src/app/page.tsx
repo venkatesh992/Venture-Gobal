@@ -10,9 +10,9 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <CTABanner className="bg-[#04255A]" />
       <StatsCounter />
       <FeaturedIndustries />
-      <CTABanner />
       <WhyChooseUs />
       <DestinationsPreview />
       <TestimonialCarousel />

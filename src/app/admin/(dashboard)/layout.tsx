@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Briefcase, FileText, Settings, Users, LayoutDashboard, LogOut, Search, Bell, Moon, ChevronRight } from "lucide-react";
+import { Briefcase, FileText, Settings, Users, LayoutDashboard, LogOut, Search, Bell, Moon, ChevronRight, MessageSquare } from "lucide-react";
 import { auth, signOut } from "@/auth";
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -35,9 +35,17 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <div>
             <p className="px-3 text-xs font-semibold uppercase tracking-wider text-muted-light mb-3">Components</p>
             <div className="space-y-1">
-              <Link href="/admin/applications" className="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2 text-sm font-medium text-primary">
+              <Link href="/admin/applications" className="flex items-center gap-3 rounded-lg hover:bg-slate-50 hover:text-foreground px-3 py-2 text-sm font-medium text-muted transition-colors">
                 <FileText className="h-4 w-4" />
-                Data Table
+                Applications
+              </Link>
+              <Link href="/admin/recruiters" className="flex items-center gap-3 rounded-lg hover:bg-slate-50 hover:text-foreground px-3 py-2 text-sm font-medium text-muted transition-colors">
+                <Users className="h-4 w-4" />
+                Recruiters
+              </Link>
+              <Link href="/admin/contacts" className="flex items-center gap-3 rounded-lg hover:bg-slate-50 hover:text-foreground px-3 py-2 text-sm font-medium text-muted transition-colors">
+                <MessageSquare className="h-4 w-4" />
+                Contacts
               </Link>
             </div>
           </div>
