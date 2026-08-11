@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, type ContactData } from "@/lib/validations";
 import { submitContact } from "@/app/actions/contact";
+import { services } from "@/lib/content/services";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -107,11 +108,19 @@ export function ContactForm() {
           <span className="mb-1.5 block text-sm font-medium text-foreground">
             Subject
           </span>
-          <input
-            className="input"
+          <select
+            className="input w-full"
             {...register("subject")}
-            placeholder="Jobs, visa, training..."
-          />
+          >
+            <option value="">Select a subject...</option>
+            {services.map((service) => (
+              <option key={service.slug} value={service.title}>
+                {service.title}
+              </option>
+            ))}
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Other">Other</option>
+          </select>
           {errors.subject && <p className="mt-1 text-xs text-red-500">{errors.subject.message}</p>}
         </label>
       </div>

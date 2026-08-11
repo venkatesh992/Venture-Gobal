@@ -52,7 +52,7 @@ export function HeroSection() {
                   Learn about us
                 </Link>
                 <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center h-14 px-8 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1 text-[15px]">
-                  Talk with an expert
+                  Chat with an expert
                 </Link>
               </div>
 
@@ -60,61 +60,20 @@ export function HeroSection() {
             </div>
 
             {/* Right Column - Image Collage */}
-            <div className="lg:col-span-5 relative h-[400px] sm:h-[500px] w-full animate-hero-copy-delay lg:translate-x-4">
-              <div className="grid grid-cols-3 gap-4 h-full relative z-10">
-                {/* Left tall image (White Collar) */}
-                <div className="col-span-2 relative h-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
-                    <Image
-                      src="/global-handshake.jpg"
-                      alt="Global Corporate Handshake"
-                    fill
-                    priority
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
-                </div>
-                
-                {/* Right stacked images */}
-                <div className="grid grid-rows-2 gap-4 h-full">
-                  {/* Top right (Blue Collar / Engineering) */}
-                  <div className="relative h-full rounded-[2rem] overflow-hidden shadow-lg group">
-                    <Image
-                      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                      alt="Indian Construction Engineer"
-                      fill
-                      priority
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                    />
-                    <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
-                  </div>
-                  
-                  {/* Bottom right (Healthcare) */}
-                  <div className="relative h-full rounded-[2rem] overflow-hidden shadow-lg group">
-                    <Image
-                      src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
-                      alt="Indian Healthcare Professional"
-                      fill
-                      priority
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                    />
-                    <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
-                  </div>
-                </div>
+            <div className="lg:col-span-5 relative w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] animate-hero-copy-delay lg:translate-x-4">
+              <div className="h-full relative z-10 w-full rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
+                <Image
+                  src="/wireframe-handshake.jpg"
+                  alt="Digital Network Handshake"
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 border border-black/5 rounded-[2rem] pointer-events-none" />
               </div>
 
-              {/* Floating Recruitment Badge */}
-              <div className="absolute bottom-8 -right-4 sm:-right-8 z-20 bg-white/95 backdrop-blur-md px-5 py-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-4 animate-[float_4s_ease-in-out_infinite]">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                  <Briefcase size={22} strokeWidth={2.5} />
-                </div>
-                <div>
-                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Just Placed</p>
-                  <p className="text-[15px] font-bold text-slate-900">Senior Engineer • Dubai</p>
-                </div>
-              </div>
+
             </div>
 
           </div>

@@ -201,7 +201,7 @@ export default async function JobDetailPage({ params }: PageProps) {
               Apply for this position
             </h2>
             <p className="mb-8 text-[15px] text-muted">
-              Submit your CV for the {job.title} role at {job.company}.
+              Submit your resume / profile for the {job.title} role at {job.company}.
             </p>
             <SubmitCVForm jobId={job.slug} />
           </div>

@@ -6,6 +6,7 @@ import {
   BriefcaseBusiness,
   GraduationCap,
   HeartHandshake,
+  Globe,
   type LucideIcon,
 } from "lucide-react";
 
@@ -324,6 +325,42 @@ export const services: Service[] = [
       "First-time overseas job seekers",
     ],
     customHref: "/training",
+  },
+  {
+    slug: "destination-guidance",
+    title: "Destination Guidance",
+    shortTitle: "Destinations",
+    summary:
+      "Explore top countries, their visa requirements, lifestyle, and career opportunities.",
+    description:
+      "Every country has different requirements, costs of living, and professional norms. We guide you through the best international destinations to help you make an informed decision for your overseas career.",
+    icon: Globe,
+    outcomes: [
+      "Country-specific visa requirements",
+      "Insights into living costs and culture",
+      "Industry demand and job market overviews",
+      "Clear comparisons between top destinations",
+    ],
+    process: [
+      {
+        title: "Destination Discovery",
+        detail: "Explore different countries to see which aligns with your career goals.",
+      },
+      {
+        title: "Requirements Review",
+        detail: "Understand what is needed to successfully relocate and work there.",
+      },
+      {
+        title: "Application Strategy",
+        detail: "Create a focused plan for your chosen destination.",
+      },
+    ],
+    whoFor: [
+      "Professionals exploring international moves",
+      "Candidates comparing different countries",
+      "Families planning a relocation abroad",
+    ],
+    customHref: "/destinations",
   },
 ];
 
