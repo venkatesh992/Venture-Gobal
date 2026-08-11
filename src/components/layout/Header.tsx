@@ -61,7 +61,7 @@ export function Header() {
 
             <div className="flex items-center gap-3">
               <Link href="/contact" className="site-header-cta hidden md:inline-flex">
-                Talk with an expert
+                Chat with an expert
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
@@ -122,7 +122,7 @@ export function Header() {
                     onClick={closeMobileMenu}
                     className="btn btn-primary w-full"
                   >
-                    Talk with an expert
+                    Chat with an expert
                   </Link>
                 </div>
               </div>

@@ -9,8 +9,8 @@ import { CTABanner } from "@/components/home/CTABanner";
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
       <CTABanner className="bg-[#04255A]" />
+      <HeroSection />
       <StatsCounter />
       <FeaturedIndustries />
       <WhyChooseUs />
