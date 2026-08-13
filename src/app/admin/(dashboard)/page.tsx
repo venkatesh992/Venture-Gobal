@@ -32,7 +32,7 @@ export default async function AdminDashboardPage() {
     <div className="w-full">
       <GreetingDashboard 
         userName={session?.user?.name || "Admin"} 
-        userRole={session?.user?.role || "ADMIN"}
+        userRole={(session?.user as any)?.role || "ADMIN"}
         stats={stats}
       />
     </div>
