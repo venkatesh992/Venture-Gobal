@@ -69,7 +69,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
             
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link 
-                href={`/find-jobs?country=${encodeURIComponent(dest.name)}`} 
+                href="/contact" 
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-[var(--radius-md)] bg-primary px-10 py-4 text-[15px] font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:shadow-primary/30"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -238,7 +238,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
               </div>
 
               <Link
-                href={`/find-jobs?country=${encodeURIComponent(dest.name)}`}
+                href="/contact"
                 className="btn btn-primary mt-10 w-full shadow-primary/20 shadow-lg text-[15px] py-4"
               >
                 Find Your Role Now

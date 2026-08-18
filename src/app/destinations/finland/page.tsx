@@ -43,7 +43,7 @@ export default function FinlandDestinationPage() {
             
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link 
-                href="/find-jobs?country=Finland" 
+                href="/contact" 
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-[var(--radius-md)] bg-cyan-600 px-10 py-4 text-[15px] font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:shadow-cyan-500/30 hover:bg-cyan-500"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function FinlandDestinationPage() {
                   <CheckCircle2 size={18} className="text-blue-500 shrink-0" /> D-Visa allows entry within 14 days for specialists
                 </li>
               </ul>
-              <Link href="/find-jobs?country=Finland&sector=IT" className="text-blue-600 font-bold inline-flex items-center gap-1 hover:gap-2 transition-all">
+              <Link href="/contact" className="text-blue-600 font-bold inline-flex items-center gap-1 hover:gap-2 transition-all">
                 View Tech Roles <ArrowRight size={16} />
               </Link>
             </div>
@@ -200,7 +200,7 @@ export default function FinlandDestinationPage() {
                   <CheckCircle2 size={18} className="text-cyan-500 shrink-0" /> Very strict nurse-to-patient safety ratios
                 </li>
               </ul>
-              <Link href="/find-jobs?country=Finland&sector=Healthcare" className="text-cyan-600 font-bold inline-flex items-center gap-1 hover:gap-2 transition-all">
+              <Link href="/contact" className="text-cyan-600 font-bold inline-flex items-center gap-1 hover:gap-2 transition-all">
                 View Healthcare Roles <ArrowRight size={16} />
               </Link>
             </div>
@@ -212,3 +212,4 @@ export default function FinlandDestinationPage() {
     </>
   );
 }
+

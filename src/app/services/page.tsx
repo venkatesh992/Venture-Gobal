@@ -23,12 +23,6 @@ export default function ServicesPage() {
             <Link href="/contact" className="btn btn-lg btn-primary">
               Talk to us
             </Link>
-            <Link
-              href="/find-jobs"
-              className="btn btn-lg border border-white/25 bg-white/5 text-white hover:bg-white/10"
-            >
-              Browse jobs
-            </Link>
           </>
         }
       />

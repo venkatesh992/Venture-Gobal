@@ -101,12 +101,6 @@ export function PageCTA({
               <Link href="/contact" className="btn btn-lg btn-on-dark">
                 Contact us
               </Link>
-              <Link
-                href="/find-jobs"
-                className="btn btn-lg border border-white/30 bg-transparent text-white hover:bg-white/10"
-              >
-                Browse jobs
-              </Link>
             </div>
           </div>
         </div>

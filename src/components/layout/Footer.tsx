@@ -12,7 +12,6 @@ import {
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "Find Jobs", href: "/find-jobs" },
   { label: "Training", href: "/training" },
   { label: "Destinations", href: "/destinations" },
   { label: "About Us", href: "/about" },
@@ -121,19 +120,19 @@ export function Footer() {
             <ul className="space-y-3.5">
               <li className="flex items-start gap-3 text-sm text-white/90">
                 <MapPin size={16} className="mt-0.5 text-primary-light shrink-0" />
-                <span>123 Business District,<br />City, State — 500001</span>
+                <span>15-16-347/1, 5th Line Nalanda Nagar,<br />Brudavana Gardens Guntur,<br />Andhra Pradesh 522006</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/90">
                 <Phone size={16} className="text-primary-light shrink-0" />
-                <span>+91 XXXXX XXXXX</span>
+                <span>+91 83093 02460</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/90">
                 <Mail size={16} className="text-primary-light shrink-0" />
-                <span>info@vgrecruitment.com</span>
+                <a href="mailto:info@venturoedge.com" className="hover:text-white transition-colors">info@venturoedge.com</a>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/90">
                 <Globe size={16} className="text-primary-light shrink-0" />
-                <span>www.vgrecruitment.com</span>
+                <span>www.venturoedge.com</span>
               </li>
             </ul>
           </div>

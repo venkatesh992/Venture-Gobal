@@ -138,7 +138,7 @@ export default async function JobDetailPage({ params }: PageProps) {
               Apply / enquire
             </Link>
             <Link
-              href="/find-jobs"
+              href="/contact"
               className="btn btn-lg border border-white/25 bg-white/5 text-white hover:bg-white/10"
             >
               Back to jobs

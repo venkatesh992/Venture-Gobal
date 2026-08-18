@@ -67,24 +67,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
           {/* Right Actions */}
           <div className="flex items-center gap-4">
-            <div className="relative hidden md:block">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
-              <input 
-                type="text" 
-                placeholder="Search..." 
-                className="h-9 w-64 rounded-md border border-border bg-background pl-9 pr-4 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-            </div>
-            
             <div className="flex items-center gap-3 border-l border-border pl-4">
-              <button className="relative text-muted hover:text-foreground transition-colors">
-                <Bell className="h-5 w-5" />
-                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
-              </button>
-              <button className="text-muted hover:text-foreground transition-colors">
-                <Moon className="h-5 w-5" />
-              </button>
-
               {session?.user && (
                 <div className="relative ml-2 group cursor-pointer">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-sm font-bold text-white">

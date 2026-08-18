@@ -33,18 +33,18 @@ export default function ContactPage() {
               <li className="flex gap-3 text-[15px] text-foreground">
                 <MapPin className="mt-0.5 shrink-0 text-primary" size={18} />
                 <span>
-                  123 Business District
+                  15-16-347/1, 5th Line Nalanda Nagar
                   <br />
-                  City, State — 500001
+                  Brudavana Gardens Guntur, Andhra Pradesh 522006
                 </span>
               </li>
               <li className="flex items-center gap-3 text-[15px] text-foreground">
                 <Phone className="shrink-0 text-primary" size={18} />
-                <span>+91 XXXXX XXXXX</span>
+                <span>+91 83093 02460</span>
               </li>
               <li className="flex items-center gap-3 text-[15px] text-foreground">
                 <Mail className="shrink-0 text-primary" size={18} />
-                <span>info@vgrecruitment.com</span>
+                <a href="mailto:info@venturoedge.com" className="hover:text-primary transition-colors">info@venturoedge.com</a>
               </li>
             </ul>
 

@@ -44,7 +44,7 @@ export default function GreeceDestinationPage() {
             
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link 
-                href="/find-jobs?country=Greece" 
+                href="/contact" 
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-[var(--radius-md)] bg-sky-600 px-10 py-4 text-[15px] font-bold text-white shadow-xl transition-all hover:scale-[1.02] hover:shadow-sky-500/30 hover:bg-sky-500"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -196,3 +196,4 @@ export default function GreeceDestinationPage() {
     </>
   );
 }
+

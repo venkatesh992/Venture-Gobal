@@ -19,12 +19,9 @@ export default function DestinationsPage() {
         description="Compare active hiring markets, visa pathways, and the support we provide from offer to arrival."
         actions={
           <>
-            <Link href="/find-jobs" className="btn btn-lg btn-primary">
-              Browse open roles
-            </Link>
             <Link
               href="/contact"
-              className="btn btn-lg border border-white/25 bg-white/5 text-white hover:bg-white/10"
+              className="btn btn-lg btn-primary"
             >
               Get destination advice
             </Link>
@@ -55,12 +52,9 @@ export default function DestinationsPage() {
           ].map((item, index) => (
             <div
               key={item.title}
-              className="border-t border-border-light pt-6"
+              className="rounded-2xl border border-border-light bg-white p-6 md:p-8"
             >
-              <p className="font-display text-sm font-semibold text-primary">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="font-display mt-3 text-xl font-semibold text-foreground">
+              <h3 className="font-display text-lg font-semibold text-foreground">
                 {item.title}
               </h3>
               <p className="mt-2 text-[15px] leading-relaxed text-muted">
@@ -75,3 +69,4 @@ export default function DestinationsPage() {
     </>
   );
 }
+

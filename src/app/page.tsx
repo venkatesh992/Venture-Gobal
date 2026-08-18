@@ -11,7 +11,6 @@ export default function HomePage() {
     <>
       <CTABanner className="bg-[#04255A]" />
       <HeroSection />
-      <StatsCounter />
       <FeaturedIndustries />
       <WhyChooseUs />
       <DestinationsPreview />
